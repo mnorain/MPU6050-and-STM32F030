@@ -1,0 +1,580 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: norain Windows User, Schlumberger, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.24.1
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DARMCM1.DLL V1.18.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TARMCM1.DLL V1.13.0.0
+ 
+<h2>Project:</h2>
+D:\Learn\mpu6050\MDK-ARM\mpu6050.uvprojx
+Project File Date:  08/19/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'mpu6050'
+assembling startup_stm32f030x8.s...
+compiling stm32f0xx_it.c...
+compiling stm32f0xx_hal_msp.c...
+compiling main.c...
+compiling mpu6050.c...
+mpu6050.h(406): warning:  #1295-D: Deprecated declaration initialize - give arg types
+          void initialize();
+mpu6050.h(407): warning:  #1295-D: Deprecated declaration testConnection - give arg types
+          
+ool testConnection();
+mpu6050.h(410): warning:  #1295-D: Deprecated declaration getAuxVDDIOLevel - give arg types
+          uint8_t getAuxVDDIOLevel();
+mpu6050.h(414): warning:  #1295-D: Deprecated declaration getRate - give arg types
+          uint8_t getRate();
+mpu6050.h(418): warning:  #1295-D: Deprecated declaration getExternalFrameSync - give arg types
+          uint8_t getExternalFrameSync();
+mpu6050.h(420): warning:  #1295-D: Deprecated declaration getDLPFMode - give arg types
+          uint8_t getDLPFMode();
+mpu6050.h(424): warning:  #1295-D: Deprecated declaration getFullScaleGyroRange - give arg types
+          uint8_t getFullScaleGyroRange();
+mpu6050.h(428): warning:  #1295-D: Deprecated declaration getAccelXSelfTest - give arg types
+          
+ool getAccelXSelfTest();
+mpu6050.h(430): warning:  #1295-D: Deprecated declaration getAccelYSelfTest - give arg types
+          
+ool getAccelYSelfTest();
+mpu6050.h(432): warning:  #1295-D: Deprecated declaration getAccelZSelfTest - give arg types
+          
+ool getAccelZSelfTest();
+mpu6050.h(434): warning:  #1295-D: Deprecated declaration getFullScaleAccelRange - give arg types
+          uint8_t getFullScaleAccelRange();
+mpu6050.h(436): warning:  #1295-D: Deprecated declaration getDHPFMode - give arg types
+          uint8_t getDHPFMode();
+mpu6050.h(440): warning:  #1295-D: Deprecated declaration getFreefallDetectionThreshold - give arg types
+          uint8_t getFreefallDetectionThreshold();
+mpu6050.h(444): warning:  #1295-D: Deprecated declaration getFreefallDetectionDuration - give arg types
+          uint8_t getFreefallDetectionDuration();
+mpu6050.h(448): warning:  #1295-D: Deprecated declaration getMotionDetectionThreshold - give arg types
+          uint8_t getMotionDetectionThreshold();
+mpu6050.h(452): warning:  #1295-D: Deprecated declaration getMotionDetectionDuration - give arg types
+          uint8_t getMotionDetectionDuration();
+mpu6050.h(456): warning:  #1295-D: Deprecated declaration getZeroMotionDetectionThreshold - give arg types
+          uint8_t getZeroMotionDetectionThreshold();
+mpu6050.h(460): warning:  #1295-D: Deprecated declaration getZeroMotionDetectionDuration - give arg types
+          uint8_t getZeroMotionDetectionDuration();
+mpu6050.h(464): warning:  #1295-D: Deprecated declaration getTempFIFOEnabled - give arg types
+          
+ool getTempFIFOEnabled();
+mpu6050.h(466): warning:  #1295-D: Deprecated declaration getXGyroFIFOEnabled - give arg types
+          
+ool getXGyroFIFOEnabled();
+mpu6050.h(468): warning:  #1295-D: Deprecated declaration getYGyroFIFOEnabled - give arg types
+          
+ool getYGyroFIFOEnabled();
+mpu6050.h(470): warning:  #1295-D: Deprecated declaration getZGyroFIFOEnabled - give arg types
+          
+ool getZGyroFIFOEnabled();
+mpu6050.h(472): warning:  #1295-D: Deprecated declaration getAccelFIFOEnabled - give arg types
+          
+ool getAccelFIFOEnabled();
+mpu6050.h(474): warning:  #1295-D: Deprecated declaration getSlave2FIFOEnabled - give arg types
+          
+ool getSlave2FIFOEnabled();
+mpu6050.h(476): warning:  #1295-D: Deprecated declaration getSlave1FIFOEnabled - give arg types
+          
+ool getSlave1FIFOEnabled();
+mpu6050.h(478): warning:  #1295-D: Deprecated declaration getSlave0FIFOEnabled - give arg types
+          
+ool getSlave0FIFOEnabled();
+mpu6050.h(482): warning:  #1295-D: Deprecated declaration getMultiMasterEnabled - give arg types
+          
+ool getMultiMasterEnabled();
+mpu6050.h(484): warning:  #1295-D: Deprecated declaration getWaitForExternalSensorEnabled - give arg types
+          
+ool getWaitForExternalSensorEnabled();
+mpu6050.h(486): warning:  #1295-D: Deprecated declaration getSlave3FIFOEnabled - give arg types
+          
+ool getSlave3FIFOEnabled();
+mpu6050.h(488): warning:  #1295-D: Deprecated declaration getSlaveReadWriteTransitionEnabled - give arg types
+          
+ool getSlaveReadWriteTransitionEnabled();
+mpu6050.h(490): warning:  #1295-D: Deprecated declaration getMasterClockSpeed - give arg types
+          uint8_t getMasterClockSpeed();
+mpu6050.h(510): warning:  #1295-D: Deprecated declaration getSlave4Address - give arg types
+          uint8_t getSlave4Address();
+mpu6050.h(512): warning:  #1295-D: Deprecated declaration getSlave4Register - give arg types
+          uint8_t getSlave4Register();
+mpu6050.h(515): warning:  #1295-D: Deprecated declaration getSlave4Enabled - give arg types
+          
+ool getSlave4Enabled();
+mpu6050.h(517): warning:  #1295-D: Deprecated declaration getSlave4InterruptEnabled - give arg types
+          
+ool getSlave4InterruptEnabled();
+mpu6050.h(519): warning:  #1295-D: Deprecated declaration getSlave4WriteMode - give arg types
+          
+ool getSlave4WriteMode();
+mpu6050.h(521): warning:  #1295-D: Deprecated declaration getSlave4MasterDelay - give arg types
+          uint8_t getSlave4MasterDelay();
+mpu6050.h(523): warning:  #1295-D: Deprecated declaration getSlate4InputByte - give arg types
+          uint8_t getSlate4InputByte();
+mpu6050.h(526): warning:  #1295-D: Deprecated declaration getPassthroughStatus - give arg types
+          
+ool getPassthroughStatus();
+mpu6050.h(527): warning:  #1295-D: Deprecated declaration getSlave4IsDone - give arg types
+          
+ool getSlave4IsDone();
+mpu6050.h(528): warning:  #1295-D: Deprecated declaration getLostArbitration - give arg types
+          
+ool getLostArbitration();
+mpu6050.h(529): warning:  #1295-D: Deprecated declaration getSlave4Nack - give arg types
+          
+ool getSlave4Nack();
+mpu6050.h(530): warning:  #1295-D: Deprecated declaration getSlave3Nack - give arg types
+          
+ool getSlave3Nack();
+mpu6050.h(531): warning:  #1295-D: Deprecated declaration getSlave2Nack - give arg types
+          
+ool getSlave2Nack();
+mpu6050.h(532): warning:  #1295-D: Deprecated declaration getSlave1Nack - give arg types
+          
+ool getSlave1Nack();
+mpu6050.h(533): warning:  #1295-D: Deprecated declaration getSlave0Nack - give arg types
+          
+ool getSlave0Nack();
+mpu6050.h(536): warning:  #1295-D: Deprecated declaration getInterruptMode - give arg types
+          
+ool getInterruptMode();
+mpu6050.h(538): warning:  #1295-D: Deprecated declaration getInterruptDrive - give arg types
+          
+ool getInterruptDrive();
+mpu6050.h(540): warning:  #1295-D: Deprecated declaration getInterruptLatch - give arg types
+          
+ool getInterruptLatch();
+mpu6050.h(542): warning:  #1295-D: Deprecated declaration getInterruptLatchClear - give arg types
+          
+ool getInterruptLatchClear();
+mpu6050.h(544): warning:  #1295-D: Deprecated declaration getFSyncInterruptLevel - give arg types
+          
+ool getFSyncInterruptLevel();
+mpu6050.h(546): warning:  #1295-D: Deprecated declaration getFSyncInterruptEnabled - give arg types
+          
+ool getFSyncInterruptEnabled();
+mpu6050.h(548): warning:  #1295-D: Deprecated declaration getI2CBypassEnabled - give arg types
+          
+ool getI2CBypassEnabled();
+mpu6050.h(550): warning:  #1295-D: Deprecated declaration getClockOutputEnabled - give arg types
+          
+ool getClockOutputEnabled();
+mpu6050.h(554): warning:  #1295-D: Deprecated declaration getIntEnabled - give arg types
+          uint8_t getIntEnabled();
+mpu6050.h(556): warning:  #1295-D: Deprecated declaration getIntFreefallEnabled - give arg types
+          
+ool getIntFreefallEnabled();
+mpu6050.h(558): warning:  #1295-D: Deprecated declaration getIntMotionEnabled - give arg types
+          
+ool getIntMotionEnabled();
+mpu6050.h(560): warning:  #1295-D: Deprecated declaration getIntZeroMotionEnabled - give arg types
+          
+ool getIntZeroMotionEnabled();
+mpu6050.h(562): warning:  #1295-D: Deprecated declaration getIntFIFOBufferOverflowEnabled - give arg types
+          
+ool getIntFIFOBufferOverflowEnabled();
+mpu6050.h(564): warning:  #1295-D: Deprecated declaration getIntI2CMasterEnabled - give arg types
+          
+ool getIntI2CMasterEnabled();
+mpu6050.h(566): warning:  #1295-D: Deprecated declaration getIntDataReadyEnabled - give arg types
+          
+ool getIntDataReadyEnabled();
+mpu6050.h(570): warning:  #1295-D: Deprecated declaration getIntStatus - give arg types
+          uint8_t getIntStatus();
+mpu6050.h(571): warning:  #1295-D: Deprecated declaration getIntFreefallStatus - give arg types
+          
+ool getIntFreefallStatus();
+mpu6050.h(572): warning:  #1295-D: Deprecated declaration getIntMotionStatus - give arg types
+          
+ool getIntMotionStatus();
+mpu6050.h(573): warning:  #1295-D: Deprecated declaration getIntZeroMotionStatus - give arg types
+          
+ool getIntZeroMotionStatus();
+mpu6050.h(574): warning:  #1295-D: Deprecated declaration getIntFIFOBufferOverflowStatus - give arg types
+          
+ool getIntFIFOBufferOverflowStatus();
+mpu6050.h(575): warning:  #1295-D: Deprecated declaration getIntI2CMasterStatus - give arg types
+          
+ool getIntI2CMasterStatus();
+mpu6050.h(576): warning:  #1295-D: Deprecated declaration getIntDataReadyStatus - give arg types
+          
+ool getIntDataReadyStatus();
+mpu6050.h(582): warning:  #1295-D: Deprecated declaration getAccelerationX - give arg types
+          int16_t getAccelerationX();
+mpu6050.h(583): warning:  #1295-D: Deprecated declaration getAccelerationY - give arg types
+          int16_t getAccelerationY();
+mpu6050.h(584): warning:  #1295-D: Deprecated declaration getAccelerationZ - give arg types
+          int16_t getAccelerationZ();
+mpu6050.h(587): warning:  #1295-D: Deprecated declaration getTemperature - give arg types
+          int16_t getTemperature();
+mpu6050.h(591): warning:  #1295-D: Deprecated declaration getRotationX - give arg types
+          int16_t getRotationX();
+mpu6050.h(592): warning:  #1295-D: Deprecated declaration getRotationY - give arg types
+          int16_t getRotationY();
+mpu6050.h(593): warning:  #1295-D: Deprecated declaration getRotationZ - give arg types
+          int16_t getRotationZ();
+mpu6050.h(601): warning:  #1295-D: Deprecated declaration getXNegMotionDetected - give arg types
+          
+ool getXNegMotionDetected();
+mpu6050.h(602): warning:  #1295-D: Deprecated declaration getXPosMotionDetected - give arg types
+          
+ool getXPosMotionDetected();
+mpu6050.h(603): warning:  #1295-D: Deprecated declaration getYNegMotionDetected - give arg types
+          
+ool getYNegMotionDetected();
+mpu6050.h(604): warning:  #1295-D: Deprecated declaration getYPosMotionDetected - give arg types
+          
+ool getYPosMotionDetected();
+mpu6050.h(605): warning:  #1295-D: Deprecated declaration getZNegMotionDetected - give arg types
+          
+ool getZNegMotionDetected();
+mpu6050.h(606): warning:  #1295-D: Deprecated declaration getZPosMotionDetected - give arg types
+          
+ool getZPosMotionDetected();
+mpu6050.h(607): warning:  #1295-D: Deprecated declaration getZeroMotionDetected - give arg types
+          
+ool getZeroMotionDetected();
+mpu6050.h(613): warning:  #1295-D: Deprecated declaration getExternalShadowDelayEnabled - give arg types
+          
+ool getExternalShadowDelayEnabled();
+mpu6050.h(619): warning:  #1295-D: Deprecated declaration resetGyroscopePath - give arg types
+          void resetGyroscopePath();
+mpu6050.h(620): warning:  #1295-D: Deprecated declaration resetAccelerometerPath - give arg types
+          void resetAccelerometerPath();
+mpu6050.h(621): warning:  #1295-D: Deprecated declaration resetTemperaturePath - give arg types
+          void resetTemperaturePath();
+mpu6050.h(624): warning:  #1295-D: Deprecated declaration getAccelerometerPowerOnDelay - give arg types
+          uint8_t getAccelerometerPowerOnDelay();
+mpu6050.h(626): warning:  #1295-D: Deprecated declaration getFreefallDetectionCounterDecrement - give arg types
+          uint8_t getFreefallDetectionCounterDecrement();
+mpu6050.h(628): warning:  #1295-D: Deprecated declaration getMotionDetectionCounterDecrement - give arg types
+          uint8_t getMotionDetectionCounterDecrement();
+mpu6050.h(632): warning:  #1295-D: Deprecated declaration getFIFOEnabled - give arg types
+          
+ool getFIFOEnabled();
+mpu6050.h(634): warning:  #1295-D: Deprecated declaration getI2CMasterModeEnabled - give arg types
+          
+ool getI2CMasterModeEnabled();
+mpu6050.h(637): warning:  #1295-D: Deprecated declaration resetFIFO - give arg types
+          void resetFIFO();
+mpu6050.h(638): warning:  #1295-D: Deprecated declaration resetI2CMaster - give arg types
+          void resetI2CMaster();
+mpu6050.h(639): warning:  #1295-D: Deprecated declaration resetSensors - give arg types
+          void resetSensors();
+mpu6050.h(642): warning:  #1295-D: Deprecated declaration reset - give arg types
+          void reset();
+mpu6050.h(643): warning:  #1295-D: Deprecated declaration getSleepEnabled - give arg types
+          
+ool getSleepEnabled();
+mpu6050.h(645): warning:  #1295-D: Deprecated declaration getWakeCycleEnabled - give arg types
+          
+ool getWakeCycleEnabled();
+mpu6050.h(647): warning:  #1295-D: Deprecated declaration getTempSensorEnabled - give arg types
+          
+ool getTempSensorEnabled();
+mpu6050.h(649): warning:  #1295-D: Deprecated declaration getClockSource - give arg types
+          uint8_t getClockSource();
+mpu6050.h(653): warning:  #1295-D: Deprecated declaration getWakeFrequency - give arg types
+          uint8_t getWakeFrequency();
+mpu6050.h(655): warning:  #1295-D: Deprecated declaration getStandbyXAccelEnabled - give arg types
+          
+ool getStandbyXAccelEnabled();
+mpu6050.h(657): warning:  #1295-D: Deprecated declaration getStandbyYAccelEnabled - give arg types
+          
+ool getStandbyYAccelEnabled();
+mpu6050.h(659): warning:  #1295-D: Deprecated declaration getStandbyZAccelEnabled - give arg types
+          
+ool getStandbyZAccelEnabled();
+mpu6050.h(661): warning:  #1295-D: Deprecated declaration getStandbyXGyroEnabled - give arg types
+          
+ool getStandbyXGyroEnabled();
+mpu6050.h(663): warning:  #1295-D: Deprecated declaration getStandbyYGyroEnabled - give arg types
+          
+ool getStandbyYGyroEnabled();
+mpu6050.h(665): warning:  #1295-D: Deprecated declaration getStandbyZGyroEnabled - give arg types
+          
+ool getStandbyZGyroEnabled();
+mpu6050.h(669): warning:  #1295-D: Deprecated declaration getFIFOCount - give arg types
+          uint16_t getFIFOCount();
+mpu6050.h(672): warning:  #1295-D: Deprecated declaration getFIFOByte - give arg types
+          uint8_t getFIFOByte();
+mpu6050.h(677): warning:  #1295-D: Deprecated declaration getDeviceID - give arg types
+          uint8_t getDeviceID();
+mpu6050.h(683): warning:  #1295-D: Deprecated declaration getOTPBankValid - give arg types
+          uint8_t getOTPBankValid();
+mpu6050.h(685): warning:  #1295-D: Deprecated declaration getXGyroOffsetTC - give arg types
+          int8_t getXGyroOffsetTC();
+mpu6050.h(689): warning:  #1295-D: Deprecated declaration getYGyroOffsetTC - give arg types
+          int8_t getYGyroOffsetTC();
+mpu6050.h(693): warning:  #1295-D: Deprecated declaration getZGyroOffsetTC - give arg types
+          int8_t getZGyroOffsetTC();
+mpu6050.h(697): warning:  #1295-D: Deprecated declaration getXFineGain - give arg types
+          int8_t getXFineGain();
+mpu6050.h(701): warning:  #1295-D: Deprecated declaration getYFineGain - give arg types
+          int8_t getYFineGain();
+mpu6050.h(705): warning:  #1295-D: Deprecated declaration getZFineGain - give arg types
+          int8_t getZFineGain();
+mpu6050.h(709): warning:  #1295-D: Deprecated declaration getXAccelOffset - give arg types
+          int16_t getXAccelOffset();
+mpu6050.h(713): warning:  #1295-D: Deprecated declaration getYAccelOffset - give arg types
+          int16_t getYAccelOffset();
+mpu6050.h(717): warning:  #1295-D: Deprecated declaration getZAccelOffset - give arg types
+          int16_t getZAccelOffset();
+mpu6050.h(721): warning:  #1295-D: Deprecated declaration getXGyroOffset - give arg types
+          int16_t getXGyroOffset();
+mpu6050.h(725): warning:  #1295-D: Deprecated declaration getYGyroOffset - give arg types
+          int16_t getYGyroOffset();
+mpu6050.h(729): warning:  #1295-D: Deprecated declaration getZGyroOffset - give arg types
+          int16_t getZGyroOffset();
+mpu6050.h(733): warning:  #1295-D: Deprecated declaration getIntPLLReadyEnabled - give arg types
+          
+ool getIntPLLReadyEnabled();
+mpu6050.h(735): warning:  #1295-D: Deprecated declaration getIntDMPEnabled - give arg types
+          
+ool getIntDMPEnabled();
+mpu6050.h(739): warning:  #1295-D: Deprecated declaration getDMPInt5Status - give arg types
+          
+ool getDMPInt5Status();
+mpu6050.h(740): warning:  #1295-D: Deprecated declaration getDMPInt4Status - give arg types
+          
+ool getDMPInt4Status();
+mpu6050.h(741): warning:  #1295-D: Deprecated declaration getDMPInt3Status - give arg types
+          
+ool getDMPInt3Status();
+mpu6050.h(742): warning:  #1295-D: Deprecated declaration getDMPInt2Status - give arg types
+          
+ool getDMPInt2Status();
+mpu6050.h(743): warning:  #1295-D: Deprecated declaration getDMPInt1Status - give arg types
+          
+ool getDMPInt1Status();
+mpu6050.h(744): warning:  #1295-D: Deprecated declaration getDMPInt0Status - give arg types
+          
+ool getDMPInt0Status();
+mpu6050.h(747): warning:  #1295-D: Deprecated declaration getIntPLLReadyStatus - give arg types
+          
+ool getIntPLLReadyStatus();
+mpu6050.h(748): warning:  #1295-D: Deprecated declaration getIntDMPStatus - give arg types
+          
+ool getIntDMPStatus();
+mpu6050.h(751): warning:  #1295-D: Deprecated declaration getDMPEnabled - give arg types
+          
+ool getDMPEnabled();
+mpu6050.h(753): warning:  #1295-D: Deprecated declaration resetDMP - give arg types
+          void resetDMP();
+mpu6050.h(756): error:  #18: expected a ")"
+          void setMemoryBank(uint8_t bank, 
+ool prefetchEnabled=false, bool userBank=false);
+mpu6050.h(762): warning:  #1295-D: Deprecated declaration readMemoryByte - give arg types
+          uint8_t readMemoryByte();
+mpu6050.h(764): error:  #18: expected a ")"
+          void readMemoryBlock(uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0);
+mpu6050.h(765): error:  #18: expected a ")"
+          
+ool writeMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0, bool verify=true, bool useProgMem=false);
+mpu6050.h(766): error:  #18: expected a ")"
+          
+ool writeProgMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0, bool verify=true);
+mpu6050.h(768): error:  #18: expected a ")"
+          
+ool writeDMPConfigurationSet(const uint8_t *data, uint16_t dataSize, 
+ool useProgMem=false);
+mpu6050.h(772): warning:  #1295-D: Deprecated declaration getDMPConfig1 - give arg types
+          uint8_t getDMPConfig1();
+mpu6050.h(776): warning:  #1295-D: Deprecated declaration getDMPConfig2 - give arg types
+          uint8_t getDMPConfig2();
+mpu6050.c(772): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_CTRL, 
+PU6050_WAIT_FOR_ES_BIT, buffer);
+mpu6050.c(790): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_CTRL, 
+PU6050_SLV_3_FIFO_EN_BIT, buffer);
+mpu6050.c(812): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_CTRL, 
+PU6050_I2C_MST_P_NSR_BIT, buffer);
+mpu6050.c(853): error:  #165: too few arguments in function call
+       readBits(devAddr, 
+PU6050_RA_I2C_MST_CTRL, 
+PU6050_I2C_MST_CLK_BIT, 
+PU6050_I2C_MST_CLK_LENGTH, buffer);
+mpu6050.c(909): error:  #165: too few arguments in function call
+       readByte(devAddr, 
+PU6050_RA_I2C_SLV0_ADDR + num*3, buffer);
+mpu6050.c(935): error:  #165: too few arguments in function call
+       readByte(devAddr, 
+PU6050_RA_I2C_SLV0_REG + num*3, buffer);
+mpu6050.c(957): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_SLV0_CTRL + num*3, 
+PU6050_I2C_SLV_EN_BIT, buffer);
+mpu6050.c(983): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_SLV0_CTRL + num*3, 
+PU6050_I2C_SLV_BYTE_SW_BIT, buffer);
+mpu6050.c(1008): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_SLV0_CTRL + num*3, 
+PU6050_I2C_SLV_REG_DIS_BIT, buffer);
+mpu6050.c(1034): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_SLV0_CTRL + num*3, 
+PU6050_I2C_SLV_GRP_BIT, buffer);
+mpu6050.c(1056): error:  #165: too few arguments in function call
+       readBits(devAddr, 
+PU6050_RA_I2C_SLV0_CTRL + num*3, 
+PU6050_I2C_SLV_LEN_BIT, 
+PU6050_I2C_SLV_LEN_LENGTH, buffer);
+mpu6050.c(1082): error:  #165: too few arguments in function call
+       readByte(devAddr, 
+PU6050_RA_I2C_SLV4_ADDR, buffer);
+mpu6050.c(1101): error:  #165: too few arguments in function call
+       readByte(devAddr, 
+PU6050_RA_I2C_SLV4_REG, buffer);
+mpu6050.c(1128): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_SLV4_CTRL, 
+PU6050_I2C_SLV4_EN_BIT, buffer);
+mpu6050.c(1149): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_SLV4_CTRL, 
+PU6050_I2C_SLV4_INT_EN_BIT, buffer);
+mpu6050.c(1170): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_SLV4_CTRL, 
+PU6050_I2C_SLV4_REG_DIS_BIT, buffer);
+mpu6050.c(1197): error:  #165: too few arguments in function call
+       readBits(devAddr, 
+PU6050_RA_I2C_SLV4_CTRL, 
+PU6050_I2C_SLV4_MST_DLY_BIT, 
+PU6050_I2C_SLV4_MST_DLY_LENGTH, buffer);
+mpu6050.c(1215): error:  #165: too few arguments in function call
+       readByte(devAddr, 
+PU6050_RA_I2C_SLV4_DI, buffer);
+mpu6050.c(1231): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_STATUS, 
+PU6050_MST_PASS_THROUGH_BIT, buffer);
+mpu6050.c(1243): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_STATUS, 
+PU6050_MST_I2C_SLV4_DONE_BIT, buffer);
+mpu6050.c(1254): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_STATUS, 
+PU6050_MST_I2C_LOST_ARB_BIT, buffer);
+mpu6050.c(1265): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_STATUS, 
+PU6050_MST_I2C_SLV4_NACK_BIT, buffer);
+mpu6050.c(1276): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_STATUS, 
+PU6050_MST_I2C_SLV3_NACK_BIT, buffer);
+mpu6050.c(1287): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_STATUS, 
+PU6050_MST_I2C_SLV2_NACK_BIT, buffer);
+mpu6050.c(1298): error:  #165: too few arguments in function call
+       readBit(devAddr, 
+PU6050_RA_I2C_MST_STATUS, 
+PU6050_MST_I2C_SLV1_NACK_BIT, buffer);
+mpu6050.c: 137 warnings, 30 errors
+compiling gpio.c...
+compiling i2c.c...
+compiling I2Cdev.c...
+I2Cdev.c(217): warning:  #223-D: function "millis" declared implicitly
+      uint32_t t1 = millis();
+I2Cdev.c(337): warning:  #223-D: function "millis" declared implicitly
+      uint32_t t1 = millis();
+I2Cdev.c(478): error:  #165: too few arguments in function call
+      readByte(devAddr, regAddr, &b);
+I2Cdev.c(492): error:  #165: too few arguments in function call
+      readWord(devAddr, regAddr, &w);
+I2Cdev.c(514): error:  #165: too few arguments in function call
+      if (readByte(devAddr, regAddr, &b) != 0) {
+I2Cdev.c(543): error:  #165: too few arguments in function call
+      if (readWord(devAddr, regAddr, &w) != 0) {
+I2Cdev.c(585): error:  #20: identifier "status" is undefined
+      return status == 0;
+I2Cdev.c(597): error:  #20: identifier "status" is undefined
+      return status == 0;
+I2Cdev.c(605): error:  #36: the #if for this directive is missing
+  #endif
+I2Cdev.c(102): warning:  #177-D: function "readBit"  was declared but never referenced
+  int8_t  readBit(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint8_t *data, uint16_t timeout) {
+I2Cdev.c(117): warning:  #177-D: function "readBitW"  was declared but never referenced
+  int8_t  readBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t *data, uint16_t timeout) {
+I2Cdev.c(133): warning:  #177-D: function "readBits"  was declared but never referenced
+  int8_t  readBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t *data, uint16_t timeout) {
+I2Cdev.c(158): warning:  #177-D: function "readBitsW"  was declared but never referenced
+  int8_t  readBitsW(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint16_t *data, uint16_t timeout) {
+I2Cdev.c(476): warning:  #177-D: function "writeBit"  was declared but never referenced
+  bool  writeBit(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint8_t data) {
+I2Cdev.c(490): warning:  #177-D: function "writeBitW"  was declared but never referenced
+  bool  writeBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t data) {
+I2Cdev.c(505): warning:  #177-D: function "writeBits"  was declared but never referenced
+  bool  writeBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t data) {
+I2Cdev.c(534): warning:  #177-D: function "writeBitsW"  was declared but never referenced
+  bool  writeBitsW(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint16_t data) {
+I2Cdev.c: 10 warnings, 7 errors
+compiling system_stm32f0xx.c...
+compiling stm32f0xx_hal_gpio.c...
+compiling stm32f0xx_hal_flash_ex.c...
+compiling stm32f0xx_hal_pwr.c...
+compiling stm32f0xx_hal_pwr_ex.c...
+compiling stm32f0xx_hal_rcc.c...
+compiling stm32f0xx_hal_tim_ex.c...
+compiling stm32f0xx_hal_cortex.c...
+compiling stm32f0xx_hal_rcc_ex.c...
+compiling stm32f0xx_hal_i2c.c...
+compiling stm32f0xx_hal.c...
+compiling stm32f0xx_hal_tim.c...
+compiling stm32f0xx_hal_dma.c...
+compiling stm32f0xx_hal_flash.c...
+compiling stm32f0xx_hal_i2c_ex.c...
+"mpu6050\mpu6050.axf" - 37 Error(s), 147 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM.CMSIS.5.0.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F0xx_DFP.1.5.0.pack
+                Keil.STM32F0xx_DFP.1.5.0
+                STMicroelectronics STM32F0 Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_mpu6050
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.1
+Target not created.
+Build Time Elapsed:  00:00:06
+</pre>
+</body>
+</html>

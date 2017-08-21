@@ -753,7 +753,7 @@ THE SOFTWARE.
         void resetDMP();
         
         // BANK_SEL register
-        void setMemoryBank(uint8_t bank, bool prefetchEnabled=false, bool userBank=false);
+        void setMemoryBank(uint8_t bank, bool prefetchEnabled, bool userBank);
         
         // MEM_START_ADDR register
         void setMemoryStartAddress(uint8_t address);
@@ -761,11 +761,11 @@ THE SOFTWARE.
         // MEM_R_W register
         uint8_t readMemoryByte();
         void writeMemoryByte(uint8_t data);
-        void readMemoryBlock(uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0);
-        bool writeMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0, bool verify=true, bool useProgMem=false);
-        bool writeProgMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0, bool verify=true);
+        void readMemoryBlock(uint8_t *data, uint16_t dataSize, uint8_t bank, uint8_t address);
+        bool writeMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank, uint8_t address, bool verify, bool useProgMem);
+        bool writeProgMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank, uint8_t address, bool verify);
 
-        bool writeDMPConfigurationSet(const uint8_t *data, uint16_t dataSize, bool useProgMem=false);
+        bool writeDMPConfigurationSet(const uint8_t *data, uint16_t dataSize, bool useProgMem);
         bool writeProgDMPConfigurationSet(const uint8_t *data, uint16_t dataSize);
 
         // DMP_CFG_1 register

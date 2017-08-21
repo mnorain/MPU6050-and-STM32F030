@@ -1,0 +1,28 @@
+--cpu Cortex-M0
+"mpu6050\startup_stm32f030x8.o"
+"mpu6050\stm32f0xx_hal_msp.o"
+"mpu6050\main.o"
+"mpu6050\stm32f0xx_it.o"
+"mpu6050\gpio.o"
+"mpu6050\i2c.o"
+"mpu6050\mpu6050.o"
+"mpu6050\i2cdev.o"
+"mpu6050\system_stm32f0xx.o"
+"mpu6050\stm32f0xx_hal_flash_ex.o"
+"mpu6050\stm32f0xx_hal_gpio.o"
+"mpu6050\stm32f0xx_hal_pwr.o"
+"mpu6050\stm32f0xx_hal_pwr_ex.o"
+"mpu6050\stm32f0xx_hal_rcc.o"
+"mpu6050\stm32f0xx_hal_i2c.o"
+"mpu6050\stm32f0xx_hal_tim_ex.o"
+"mpu6050\stm32f0xx_hal_cortex.o"
+"mpu6050\stm32f0xx_hal_rcc_ex.o"
+"mpu6050\stm32f0xx_hal.o"
+"mpu6050\stm32f0xx_hal_dma.o"
+"mpu6050\stm32f0xx_hal_tim.o"
+"mpu6050\stm32f0xx_hal_flash.o"
+"mpu6050\stm32f0xx_hal_i2c_ex.o"
+--library_type=microlib --strict --scatter "mpu6050\mpu6050.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "mpu6050.map" -o mpu6050\mpu6050.axf

@@ -1,0 +1,1592 @@
+Component: ARM Compiler 5.06 update 2 (build 183) Tool: armlink [4d35b7]
+
+==============================================================================
+
+Section Cross References
+
+    startup_stm32f030x8.o(RESET) refers to startup_stm32f030x8.o(STACK) for __initial_sp
+    startup_stm32f030x8.o(RESET) refers to startup_stm32f030x8.o(.text) for Reset_Handler
+    startup_stm32f030x8.o(RESET) refers to stm32f0xx_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32f030x8.o(.text) refers to system_stm32f0xx.o(i.SystemInit) for SystemInit
+    startup_stm32f030x8.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    stm32f0xx_hal_msp.o(i.HAL_MspInit) refers to stm32f0xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    main.o(i.SystemClock_Config) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_OscConfig) for HAL_RCC_OscConfig
+    main.o(i.SystemClock_Config) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig) for HAL_RCC_ClockConfig
+    main.o(i.SystemClock_Config) refers to stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig) for HAL_RCCEx_PeriphCLKConfig
+    main.o(i.SystemClock_Config) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq) for HAL_RCC_GetHCLKFreq
+    main.o(i.SystemClock_Config) refers to uidiv.o(.text) for __aeabi_uidivmod
+    main.o(i.SystemClock_Config) refers to stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_Config) for HAL_SYSTICK_Config
+    main.o(i.SystemClock_Config) refers to stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig) for HAL_SYSTICK_CLKSourceConfig
+    main.o(i.SystemClock_Config) refers to stm32f0xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    main.o(i.main) refers to stm32f0xx_hal.o(i.HAL_Init) for HAL_Init
+    main.o(i.main) refers to main.o(i.SystemClock_Config) for SystemClock_Config
+    main.o(i.main) refers to gpio.o(i.MX_GPIO_Init) for MX_GPIO_Init
+    main.o(i.main) refers to i2c.o(i.MX_I2C1_Init) for MX_I2C1_Init
+    stm32f0xx_it.o(i.SysTick_Handler) refers to stm32f0xx_hal.o(i.HAL_IncTick) for HAL_IncTick
+    stm32f0xx_it.o(i.SysTick_Handler) refers to stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler) for HAL_SYSTICK_IRQHandler
+    gpio.o(i.MX_GPIO_Init) refers to stm32f0xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    gpio.o(i.MX_GPIO_Init) refers to stm32f0xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    i2c.o(i.HAL_I2C_MspDeInit) refers to stm32f0xx_hal_gpio.o(i.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
+    i2c.o(i.HAL_I2C_MspInit) refers to stm32f0xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    i2c.o(i.MX_I2C1_Init) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_Init) for HAL_I2C_Init
+    i2c.o(i.MX_I2C1_Init) refers to main.o(i._Error_Handler) for _Error_Handler
+    i2c.o(i.MX_I2C1_Init) refers to stm32f0xx_hal_i2c_ex.o(i.HAL_I2CEx_ConfigAnalogFilter) for HAL_I2CEx_ConfigAnalogFilter
+    i2c.o(i.MX_I2C1_Init) refers to stm32f0xx_hal_i2c_ex.o(i.HAL_I2CEx_ConfigDigitalFilter) for HAL_I2CEx_ConfigDigitalFilter
+    i2c.o(i.MX_I2C1_Init) refers to i2c.o(.bss) for .bss
+    mpu6050.o(i.getAccelFIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getAccelFIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAccelFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getAccelXSelfTest) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getAccelXSelfTest) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAccelXSelfTest) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getAccelYSelfTest) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getAccelYSelfTest) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAccelYSelfTest) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getAccelZSelfTest) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getAccelZSelfTest) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAccelZSelfTest) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getAcceleration) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getAcceleration) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAcceleration) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getAccelerationX) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getAccelerationX) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAccelerationX) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getAccelerationY) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getAccelerationY) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAccelerationY) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getAccelerationZ) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getAccelerationZ) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAccelerationZ) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getAccelerometerPowerOnDelay) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getAccelerometerPowerOnDelay) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAccelerometerPowerOnDelay) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getAuxVDDIOLevel) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getAuxVDDIOLevel) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getAuxVDDIOLevel) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getClockOutputEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getClockOutputEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getClockOutputEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getClockSource) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getClockSource) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getClockSource) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDHPFMode) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getDHPFMode) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDHPFMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDLPFMode) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getDLPFMode) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDLPFMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDMPConfig1) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getDMPConfig1) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDMPConfig1) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDMPConfig2) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getDMPConfig2) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDMPConfig2) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDMPEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getDMPEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDMPEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDMPInt0Status) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getDMPInt0Status) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDMPInt0Status) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDMPInt1Status) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getDMPInt1Status) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDMPInt1Status) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDMPInt2Status) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getDMPInt2Status) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDMPInt2Status) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDMPInt3Status) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getDMPInt3Status) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDMPInt3Status) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDMPInt4Status) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getDMPInt4Status) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDMPInt4Status) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDMPInt5Status) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getDMPInt5Status) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDMPInt5Status) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getDeviceID) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getDeviceID) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getDeviceID) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getExternalFrameSync) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getExternalFrameSync) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getExternalFrameSync) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getExternalSensorByte) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getExternalSensorByte) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getExternalSensorByte) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getExternalSensorDWord) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getExternalSensorDWord) refers to uread4.o(.text) for __aeabi_uread4
+    mpu6050.o(i.getExternalSensorDWord) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getExternalSensorDWord) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getExternalSensorWord) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getExternalSensorWord) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getExternalSensorWord) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getExternalShadowDelayEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getExternalShadowDelayEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getExternalShadowDelayEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFIFOByte) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getFIFOByte) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFIFOByte) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFIFOBytes) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getFIFOBytes) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFIFOCount) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getFIFOCount) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFIFOCount) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getFIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFSyncInterruptEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getFSyncInterruptEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFSyncInterruptEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFSyncInterruptLevel) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getFSyncInterruptLevel) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFSyncInterruptLevel) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFreefallDetectionCounterDecrement) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getFreefallDetectionCounterDecrement) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFreefallDetectionCounterDecrement) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFreefallDetectionDuration) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getFreefallDetectionDuration) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFreefallDetectionDuration) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFreefallDetectionThreshold) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getFreefallDetectionThreshold) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFreefallDetectionThreshold) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFullScaleAccelRange) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getFullScaleAccelRange) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFullScaleAccelRange) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getFullScaleGyroRange) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getFullScaleGyroRange) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getFullScaleGyroRange) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getI2CBypassEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getI2CBypassEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getI2CBypassEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getI2CMasterModeEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getI2CMasterModeEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getI2CMasterModeEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntDMPEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntDMPEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntDMPEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntDMPStatus) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntDMPStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntDMPStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntDataReadyEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntDataReadyEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntDataReadyEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntDataReadyStatus) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntDataReadyStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntDataReadyStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntEnabled) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getIntEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntFIFOBufferOverflowEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntFIFOBufferOverflowEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntFIFOBufferOverflowEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntFIFOBufferOverflowStatus) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntFIFOBufferOverflowStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntFIFOBufferOverflowStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntFreefallEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntFreefallEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntFreefallEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntFreefallStatus) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntFreefallStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntFreefallStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntI2CMasterEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntI2CMasterEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntI2CMasterEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntI2CMasterStatus) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntI2CMasterStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntI2CMasterStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntMotionEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntMotionEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntMotionEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntMotionStatus) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntMotionStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntMotionStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntPLLReadyEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntPLLReadyEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntPLLReadyEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntPLLReadyStatus) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntPLLReadyStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntPLLReadyStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntStatus) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getIntStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntZeroMotionEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntZeroMotionEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntZeroMotionEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getIntZeroMotionStatus) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getIntZeroMotionStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getIntZeroMotionStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getInterruptDrive) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getInterruptDrive) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getInterruptDrive) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getInterruptLatch) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getInterruptLatch) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getInterruptLatch) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getInterruptLatchClear) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getInterruptLatchClear) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getInterruptLatchClear) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getInterruptMode) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getInterruptMode) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getInterruptMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getLostArbitration) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getLostArbitration) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getLostArbitration) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getMasterClockSpeed) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getMasterClockSpeed) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getMasterClockSpeed) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getMotion6) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getMotion6) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getMotion6) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getMotion9) refers to mpu6050.o(i.getMotion6) for getMotion6
+    mpu6050.o(i.getMotionDetectionCounterDecrement) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getMotionDetectionCounterDecrement) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getMotionDetectionCounterDecrement) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getMotionDetectionDuration) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getMotionDetectionDuration) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getMotionDetectionDuration) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getMotionDetectionThreshold) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getMotionDetectionThreshold) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getMotionDetectionThreshold) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getMultiMasterEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getMultiMasterEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getMultiMasterEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getOTPBankValid) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getOTPBankValid) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getOTPBankValid) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getPassthroughStatus) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getPassthroughStatus) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getPassthroughStatus) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getRate) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getRate) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getRate) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getRotation) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getRotation) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getRotation) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getRotationX) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getRotationX) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getRotationX) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getRotationY) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getRotationY) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getRotationY) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getRotationZ) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getRotationZ) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getRotationZ) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlate4InputByte) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getSlate4InputByte) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlate4InputByte) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave0FIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave0FIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave0FIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave0Nack) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave0Nack) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave0Nack) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave1FIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave1FIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave1FIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave1Nack) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave1Nack) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave1Nack) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave2FIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave2FIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave2FIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave2Nack) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave2Nack) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave2Nack) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave3FIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave3FIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave3FIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave3Nack) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave3Nack) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave3Nack) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave4Address) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getSlave4Address) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave4Address) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave4Enabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave4Enabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave4Enabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave4InterruptEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave4InterruptEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave4InterruptEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave4IsDone) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave4IsDone) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave4IsDone) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave4MasterDelay) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getSlave4MasterDelay) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave4MasterDelay) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave4Nack) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave4Nack) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave4Nack) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave4Register) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getSlave4Register) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave4Register) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlave4WriteMode) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlave4WriteMode) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlave4WriteMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlaveAddress) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getSlaveAddress) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlaveAddress) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlaveDataLength) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getSlaveDataLength) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlaveDataLength) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlaveDelayEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlaveDelayEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlaveDelayEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlaveEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlaveEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlaveEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlaveReadWriteTransitionEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlaveReadWriteTransitionEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlaveReadWriteTransitionEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlaveRegister) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getSlaveRegister) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlaveRegister) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlaveWordByteSwap) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlaveWordByteSwap) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlaveWordByteSwap) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlaveWordGroupOffset) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlaveWordGroupOffset) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlaveWordGroupOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSlaveWriteMode) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSlaveWriteMode) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSlaveWriteMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getSleepEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getSleepEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getSleepEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getStandbyXAccelEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getStandbyXAccelEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getStandbyXAccelEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getStandbyXGyroEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getStandbyXGyroEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getStandbyXGyroEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getStandbyYAccelEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getStandbyYAccelEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getStandbyYAccelEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getStandbyYGyroEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getStandbyYGyroEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getStandbyYGyroEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getStandbyZAccelEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getStandbyZAccelEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getStandbyZAccelEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getStandbyZGyroEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getStandbyZGyroEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getStandbyZGyroEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getTempFIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getTempFIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getTempFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getTempSensorEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getTempSensorEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getTempSensorEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getTemperature) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getTemperature) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getTemperature) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getWaitForExternalSensorEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getWaitForExternalSensorEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getWaitForExternalSensorEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getWakeCycleEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getWakeCycleEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getWakeCycleEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getWakeFrequency) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getWakeFrequency) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getWakeFrequency) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getXAccelOffset) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getXAccelOffset) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getXAccelOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getXFineGain) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getXFineGain) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getXFineGain) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getXGyroFIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getXGyroFIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getXGyroFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getXGyroOffset) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getXGyroOffset) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getXGyroOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getXGyroOffsetTC) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getXGyroOffsetTC) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getXGyroOffsetTC) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getXNegMotionDetected) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getXNegMotionDetected) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getXNegMotionDetected) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getXPosMotionDetected) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getXPosMotionDetected) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getXPosMotionDetected) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getYAccelOffset) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getYAccelOffset) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getYAccelOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getYFineGain) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getYFineGain) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getYFineGain) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getYGyroFIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getYGyroFIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getYGyroFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getYGyroOffset) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getYGyroOffset) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getYGyroOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getYGyroOffsetTC) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getYGyroOffsetTC) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getYGyroOffsetTC) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getYNegMotionDetected) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getYNegMotionDetected) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getYNegMotionDetected) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getYPosMotionDetected) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getYPosMotionDetected) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getYPosMotionDetected) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZAccelOffset) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getZAccelOffset) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZAccelOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZFineGain) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getZFineGain) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZFineGain) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZGyroFIFOEnabled) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getZGyroFIFOEnabled) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZGyroFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZGyroOffset) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.getZGyroOffset) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZGyroOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZGyroOffsetTC) refers to i2cdev.o(i.readBits) for readBits
+    mpu6050.o(i.getZGyroOffsetTC) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZGyroOffsetTC) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZNegMotionDetected) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getZNegMotionDetected) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZNegMotionDetected) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZPosMotionDetected) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getZPosMotionDetected) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZPosMotionDetected) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZeroMotionDetected) refers to i2cdev.o(i.readBit) for readBit
+    mpu6050.o(i.getZeroMotionDetected) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZeroMotionDetected) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZeroMotionDetectionDuration) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getZeroMotionDetectionDuration) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZeroMotionDetectionDuration) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.getZeroMotionDetectionThreshold) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.getZeroMotionDetectionThreshold) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.getZeroMotionDetectionThreshold) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.initialize) refers to mpu6050.o(i.setClockSource) for setClockSource
+    mpu6050.o(i.initialize) refers to mpu6050.o(i.setFullScaleGyroRange) for setFullScaleGyroRange
+    mpu6050.o(i.initialize) refers to mpu6050.o(i.setFullScaleAccelRange) for setFullScaleAccelRange
+    mpu6050.o(i.initialize) refers to mpu6050.o(i.setSleepEnabled) for setSleepEnabled
+    mpu6050.o(i.initialize) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.readMemoryBlock) refers to mpu6050.o(i.setMemoryBank) for setMemoryBank
+    mpu6050.o(i.readMemoryBlock) refers to mpu6050.o(i.setMemoryStartAddress) for setMemoryStartAddress
+    mpu6050.o(i.readMemoryBlock) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.readMemoryBlock) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.readMemoryByte) refers to i2cdev.o(i.readByte) for readByte
+    mpu6050.o(i.readMemoryByte) refers to mpu6050.o(.bss) for .bss
+    mpu6050.o(i.readMemoryByte) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.reset) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.reset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.resetAccelerometerPath) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.resetAccelerometerPath) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.resetDMP) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.resetDMP) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.resetFIFO) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.resetFIFO) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.resetGyroscopePath) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.resetGyroscopePath) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.resetI2CMaster) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.resetI2CMaster) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.resetSensors) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.resetSensors) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.resetTemperaturePath) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.resetTemperaturePath) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setAccelFIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setAccelFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setAccelXSelfTest) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setAccelXSelfTest) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setAccelYSelfTest) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setAccelYSelfTest) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setAccelZSelfTest) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setAccelZSelfTest) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setAccelerometerPowerOnDelay) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setAccelerometerPowerOnDelay) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setAuxVDDIOLevel) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setAuxVDDIOLevel) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setClockOutputEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setClockOutputEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setClockSource) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setClockSource) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setDHPFMode) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setDHPFMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setDLPFMode) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setDLPFMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setDMPConfig1) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setDMPConfig1) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setDMPConfig2) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setDMPConfig2) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setDMPEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setDMPEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setDeviceID) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setDeviceID) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setExternalFrameSync) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setExternalFrameSync) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setExternalShadowDelayEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setExternalShadowDelayEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setFIFOByte) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setFIFOByte) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setFIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setFSyncInterruptEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setFSyncInterruptEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setFSyncInterruptLevel) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setFSyncInterruptLevel) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setFreefallDetectionCounterDecrement) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setFreefallDetectionCounterDecrement) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setFreefallDetectionDuration) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setFreefallDetectionDuration) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setFreefallDetectionThreshold) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setFreefallDetectionThreshold) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setFullScaleAccelRange) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setFullScaleAccelRange) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setFullScaleGyroRange) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setFullScaleGyroRange) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setI2CBypassEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setI2CBypassEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setI2CMasterModeEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setI2CMasterModeEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setIntDMPEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setIntDMPEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setIntDataReadyEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setIntDataReadyEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setIntEnabled) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setIntEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setIntFIFOBufferOverflowEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setIntFIFOBufferOverflowEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setIntFreefallEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setIntFreefallEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setIntI2CMasterEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setIntI2CMasterEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setIntMotionEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setIntMotionEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setIntPLLReadyEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setIntPLLReadyEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setIntZeroMotionEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setIntZeroMotionEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setInterruptDrive) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setInterruptDrive) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setInterruptLatch) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setInterruptLatch) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setInterruptLatchClear) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setInterruptLatchClear) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setInterruptMode) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setInterruptMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setMasterClockSpeed) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setMasterClockSpeed) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setMemoryBank) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setMemoryBank) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setMemoryStartAddress) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setMemoryStartAddress) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setMotionDetectionCounterDecrement) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setMotionDetectionCounterDecrement) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setMotionDetectionDuration) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setMotionDetectionDuration) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setMotionDetectionThreshold) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setMotionDetectionThreshold) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setMultiMasterEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setMultiMasterEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setOTPBankValid) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setOTPBankValid) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setRate) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setRate) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave0FIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlave0FIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave1FIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlave1FIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave2FIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlave2FIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave3FIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlave3FIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave4Address) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setSlave4Address) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave4Enabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlave4Enabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave4InterruptEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlave4InterruptEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave4MasterDelay) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setSlave4MasterDelay) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave4OutputByte) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setSlave4OutputByte) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave4Register) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setSlave4Register) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlave4WriteMode) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlave4WriteMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveAddress) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setSlaveAddress) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveDataLength) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setSlaveDataLength) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveDelayEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlaveDelayEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlaveEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveOutputByte) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setSlaveOutputByte) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveReadWriteTransitionEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlaveReadWriteTransitionEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveRegister) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setSlaveRegister) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveWordByteSwap) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlaveWordByteSwap) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveWordGroupOffset) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlaveWordGroupOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSlaveWriteMode) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSlaveWriteMode) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setSleepEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setSleepEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setStandbyXAccelEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setStandbyXAccelEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setStandbyXGyroEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setStandbyXGyroEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setStandbyYAccelEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setStandbyYAccelEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setStandbyYGyroEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setStandbyYGyroEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setStandbyZAccelEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setStandbyZAccelEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setStandbyZGyroEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setStandbyZGyroEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setTempFIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setTempFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setTempSensorEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setTempSensorEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setWaitForExternalSensorEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setWaitForExternalSensorEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setWakeCycleEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setWakeCycleEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setWakeFrequency) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setWakeFrequency) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setXAccelOffset) refers to i2cdev.o(i.writeWord) for writeWord
+    mpu6050.o(i.setXAccelOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setXFineGain) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setXFineGain) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setXGyroFIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setXGyroFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setXGyroOffset) refers to i2cdev.o(i.writeWord) for writeWord
+    mpu6050.o(i.setXGyroOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setXGyroOffsetTC) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setXGyroOffsetTC) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setYAccelOffset) refers to i2cdev.o(i.writeWord) for writeWord
+    mpu6050.o(i.setYAccelOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setYFineGain) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setYFineGain) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setYGyroFIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setYGyroFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setYGyroOffset) refers to i2cdev.o(i.writeWord) for writeWord
+    mpu6050.o(i.setYGyroOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setYGyroOffsetTC) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setYGyroOffsetTC) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setZAccelOffset) refers to i2cdev.o(i.writeWord) for writeWord
+    mpu6050.o(i.setZAccelOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setZFineGain) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setZFineGain) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setZGyroFIFOEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.setZGyroFIFOEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setZGyroOffset) refers to i2cdev.o(i.writeWord) for writeWord
+    mpu6050.o(i.setZGyroOffset) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setZGyroOffsetTC) refers to i2cdev.o(i.writeBits) for writeBits
+    mpu6050.o(i.setZGyroOffsetTC) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setZeroMotionDetectionDuration) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setZeroMotionDetectionDuration) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.setZeroMotionDetectionThreshold) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.setZeroMotionDetectionThreshold) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.switchSPIEnabled) refers to i2cdev.o(i.writeBit) for writeBit
+    mpu6050.o(i.switchSPIEnabled) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.testConnection) refers to mpu6050.o(i.getDeviceID) for getDeviceID
+    mpu6050.o(i.writeDMPConfigurationSet) refers to mallocr.o(i.__malloc$realloc) for malloc
+    mpu6050.o(i.writeDMPConfigurationSet) refers to mallocr.o(i.realloc) for realloc
+    mpu6050.o(i.writeDMPConfigurationSet) refers to mpu6050.o(i.writeMemoryBlock) for writeMemoryBlock
+    mpu6050.o(i.writeDMPConfigurationSet) refers to mallocr.o(i.__free$realloc) for free
+    mpu6050.o(i.writeDMPConfigurationSet) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.writeDMPConfigurationSet) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.writeMemoryBlock) refers to mpu6050.o(i.setMemoryBank) for setMemoryBank
+    mpu6050.o(i.writeMemoryBlock) refers to mpu6050.o(i.setMemoryStartAddress) for setMemoryStartAddress
+    mpu6050.o(i.writeMemoryBlock) refers to mallocr.o(i.__malloc$realloc) for malloc
+    mpu6050.o(i.writeMemoryBlock) refers to i2cdev.o(i.writeBytes) for writeBytes
+    mpu6050.o(i.writeMemoryBlock) refers to i2cdev.o(i.readBytes) for readBytes
+    mpu6050.o(i.writeMemoryBlock) refers to memcmp.o(.text) for memcmp
+    mpu6050.o(i.writeMemoryBlock) refers to mallocr.o(i.__free$realloc) for free
+    mpu6050.o(i.writeMemoryBlock) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.writeMemoryByte) refers to i2cdev.o(i.writeByte) for writeByte
+    mpu6050.o(i.writeMemoryByte) refers to mpu6050.o(.data) for .data
+    mpu6050.o(i.writeProgDMPConfigurationSet) refers to mpu6050.o(i.writeDMPConfigurationSet) for writeDMPConfigurationSet
+    mpu6050.o(i.writeProgMemoryBlock) refers to mpu6050.o(i.writeMemoryBlock) for writeMemoryBlock
+    i2cdev.o(i.writeBit) refers to i2cdev.o(i.writeByte) for writeByte
+    i2cdev.o(i.writeBits) refers to i2cdev.o(i.writeByte) for writeByte
+    system_stm32f0xx.o(i.SystemCoreClockUpdate) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_stm32f0xx.o(i.SystemCoreClockUpdate) refers to system_stm32f0xx.o(.data) for .data
+    system_stm32f0xx.o(i.SystemCoreClockUpdate) refers to system_stm32f0xx.o(.constdata) for .constdata
+    stm32f0xx_hal_flash_ex.o(i.FLASH_MassErase) refers to stm32f0xx_hal_flash.o(.bss) for pFlash
+    stm32f0xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP) refers to stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f0xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP) refers to stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) for HAL_FLASHEx_OBErase
+    stm32f0xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP) refers to stm32f0xx_hal_flash.o(.bss) for pFlash
+    stm32f0xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP) refers to stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f0xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP) refers to stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) for HAL_FLASHEx_OBErase
+    stm32f0xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP) refers to stm32f0xx_hal_flash.o(.bss) for pFlash
+    stm32f0xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig) refers to stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f0xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig) refers to stm32f0xx_hal_flash.o(.bss) for pFlash
+    stm32f0xx_hal_flash_ex.o(i.FLASH_PageErase) refers to stm32f0xx_hal_flash.o(.bss) for pFlash
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_MassErase) for FLASH_MassErase
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_PageErase) for FLASH_PageErase
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f0xx_hal_flash.o(.bss) for pFlash
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_PageErase) for FLASH_PageErase
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_MassErase) for FLASH_MassErase
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT) refers to stm32f0xx_hal_flash.o(.bss) for pFlash
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_OB_GetRDP) for FLASH_OB_GetRDP
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) refers to stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig) for FLASH_OB_RDP_LevelConfig
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) refers to stm32f0xx_hal_flash.o(.bss) for pFlash
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBGetConfig) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_OB_GetRDP) for FLASH_OB_GetRDP
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP) for FLASH_OB_DisableWRP
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP) for FLASH_OB_EnableWRP
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig) for FLASH_OB_RDP_LevelConfig
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f0xx_hal_flash.o(.bss) for pFlash
+    stm32f0xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler) refers to stm32f0xx_hal_gpio.o(i.HAL_GPIO_EXTI_Callback) for HAL_GPIO_EXTI_Callback
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq) for HAL_RCC_GetSysClockFreq
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f0xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to system_stm32f0xx.o(.constdata) for AHBPrescTable
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to system_stm32f0xx.o(.data) for SystemCoreClock
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_DeInit) refers to system_stm32f0xx.o(.data) for SystemCoreClock
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq) refers to system_stm32f0xx.o(.data) for SystemCoreClock
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) refers to system_stm32f0xx.o(.data) for SystemCoreClock
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) refers to system_stm32f0xx.o(.constdata) for APBPrescTable
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_MCOConfig) refers to stm32f0xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_NMI_IRQHandler) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_CSSCallback) for HAL_RCC_CSSCallback
+    stm32f0xx_hal_rcc.o(i.HAL_RCC_OscConfig) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_DeInit) refers to i2c.o(i.HAL_I2C_MspDeInit) for HAL_I2C_MspDeInit
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_DisableListen_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_ER_IRQHandler) refers to stm32f0xx_hal_i2c.o(i.I2C_ITError) for I2C_ITError
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_EnableListen_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_EnableListen_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) for I2C_Slave_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Init) refers to i2c.o(i.HAL_I2C_MspInit) for HAL_I2C_MspInit
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_IsDeviceReady) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_IsDeviceReady) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) for I2C_WaitOnFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Abort_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Abort_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Abort_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) for I2C_WaitOnFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnRXNEFlagUntilTimeout) for I2C_WaitOnRXNEFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnSTOPFlagUntilTimeout) for I2C_WaitOnSTOPFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_DMA) refers to stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) for I2C_Master_ISR_DMA
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAMasterReceiveCplt) for I2C_DMAMasterReceiveCplt
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAError) for I2C_DMAError
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) for I2C_Master_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) for I2C_Master_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Sequential_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Sequential_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Sequential_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) for I2C_Master_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Sequential_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Sequential_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Sequential_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) for I2C_Master_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) for I2C_WaitOnFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnTXISFlagUntilTimeout) for I2C_WaitOnTXISFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnSTOPFlagUntilTimeout) for I2C_WaitOnSTOPFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_DMA) refers to stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) for I2C_Master_ISR_DMA
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAMasterTransmitCplt) for I2C_DMAMasterTransmitCplt
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAError) for I2C_DMAError
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) for I2C_Master_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) for I2C_Master_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) for I2C_WaitOnFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read) refers to stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryRead) for I2C_RequestMemoryRead
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnSTOPFlagUntilTimeout) for I2C_WaitOnSTOPFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_DMA) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryRead) for I2C_RequestMemoryRead
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_DMA) refers to stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) for I2C_Master_ISR_DMA
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAMasterReceiveCplt) for I2C_DMAMasterReceiveCplt
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAError) for I2C_DMAError
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_IT) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryRead) for I2C_RequestMemoryRead
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) for I2C_Master_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) for I2C_WaitOnFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write) refers to stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryWrite) for I2C_RequestMemoryWrite
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnTXISFlagUntilTimeout) for I2C_WaitOnTXISFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnSTOPFlagUntilTimeout) for I2C_WaitOnSTOPFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_DMA) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryWrite) for I2C_RequestMemoryWrite
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_DMA) refers to stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) for I2C_Master_ISR_DMA
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAMasterTransmitCplt) for I2C_DMAMasterTransmitCplt
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAError) for I2C_DMAError
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_IT) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryWrite) for I2C_RequestMemoryWrite
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) for I2C_Master_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) for I2C_WaitOnFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnRXNEFlagUntilTimeout) for I2C_WaitOnRXNEFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnSTOPFlagUntilTimeout) for I2C_WaitOnSTOPFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive_DMA) refers to stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_DMA) for I2C_Slave_ISR_DMA
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMASlaveReceiveCplt) for I2C_DMASlaveReceiveCplt
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAError) for I2C_DMAError
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) for I2C_Slave_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Sequential_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Sequential_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Sequential_Receive_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) for I2C_Slave_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Sequential_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Sequential_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Sequential_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) for I2C_Slave_ISR_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) for I2C_WaitOnFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnTXISFlagUntilTimeout) for I2C_WaitOnTXISFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnSTOPFlagUntilTimeout) for I2C_WaitOnSTOPFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit_DMA) refers to stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_DMA) for I2C_Slave_ISR_DMA
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMASlaveTransmitCplt) for I2C_DMASlaveTransmitCplt
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAError) for I2C_DMAError
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) for I2C_Slave_ISR_IT
+    stm32f0xx_hal_i2c.o(i.I2C_DMAAbort) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_ErrorCallback) for HAL_I2C_ErrorCallback
+    stm32f0xx_hal_i2c.o(i.I2C_DMAAbort) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_AbortCpltCallback) for HAL_I2C_AbortCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_DMAError) refers to stm32f0xx_hal_i2c.o(i.I2C_ITError) for I2C_ITError
+    stm32f0xx_hal_i2c.o(i.I2C_DMAMasterReceiveCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_DMAMasterReceiveCplt) refers to stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f0xx_hal_i2c.o(i.I2C_DMAMasterTransmitCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_DMAMasterTransmitCplt) refers to stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) refers to stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) for I2C_Master_ISR_DMA
+    stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) refers to stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_DMA) for I2C_Slave_ISR_DMA
+    stm32f0xx_hal_i2c.o(i.I2C_ITAddrCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_ITAddrCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_AddrCallback) for HAL_I2C_AddrCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITError) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_ITError) refers to stm32f0xx_hal_dma.o(i.HAL_DMA_Abort_IT) for HAL_DMA_Abort_IT
+    stm32f0xx_hal_i2c.o(i.I2C_ITError) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_ErrorCallback) for HAL_I2C_ErrorCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITError) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_AbortCpltCallback) for HAL_I2C_AbortCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITError) refers to stm32f0xx_hal_i2c.o(i.I2C_DMAAbort) for I2C_DMAAbort
+    stm32f0xx_hal_i2c.o(i.I2C_ITError) refers to stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) for I2C_Slave_ISR_IT
+    stm32f0xx_hal_i2c.o(i.I2C_ITListenCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_ITListenCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_ListenCpltCallback) for HAL_I2C_ListenCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Flush_TXDR) for I2C_Flush_TXDR
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_MasterRxCpltCallback) for HAL_I2C_MasterRxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_ITError) for I2C_ITError
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_MasterTxCpltCallback) for HAL_I2C_MasterTxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_MemTxCpltCallback) for HAL_I2C_MemTxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_MemRxCpltCallback) for HAL_I2C_MemRxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterSequentialCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterSequentialCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_MasterRxCpltCallback) for HAL_I2C_MasterRxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITMasterSequentialCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_MasterTxCpltCallback) for HAL_I2C_MasterTxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Flush_TXDR) for I2C_Flush_TXDR
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_ITError) for I2C_ITError
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_ITListenCplt) for I2C_ITListenCplt
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_ListenCpltCallback) for HAL_I2C_ListenCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_SlaveTxCpltCallback) for HAL_I2C_SlaveTxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_SlaveRxCpltCallback) for HAL_I2C_SlaveRxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveSequentialCplt) refers to stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ) for I2C_Disable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveSequentialCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_SlaveRxCpltCallback) for HAL_I2C_SlaveRxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_ITSlaveSequentialCplt) refers to stm32f0xx_hal_i2c.o(i.HAL_I2C_SlaveTxCpltCallback) for HAL_I2C_SlaveTxCpltCallback
+    stm32f0xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed) refers to stm32f0xx_hal_i2c.o(i.I2C_Flush_TXDR) for I2C_Flush_TXDR
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ) for I2C_Enable_IRQ
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_Flush_TXDR) for I2C_Flush_TXDR
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_ITError) for I2C_ITError
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt) for I2C_ITMasterCplt
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Flush_TXDR) for I2C_Flush_TXDR
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_ITError) for I2C_ITError
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt) for I2C_ITMasterCplt
+    stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_ITMasterSequentialCplt) for I2C_ITMasterSequentialCplt
+    stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryRead) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryRead) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnTXISFlagUntilTimeout) for I2C_WaitOnTXISFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryRead) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) for I2C_WaitOnFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryWrite) refers to stm32f0xx_hal_i2c.o(i.I2C_TransferConfig) for I2C_TransferConfig
+    stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryWrite) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnTXISFlagUntilTimeout) for I2C_WaitOnTXISFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryWrite) refers to stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) for I2C_WaitOnFlagUntilTimeout
+    stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_DMA) refers to stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt) for I2C_ITSlaveCplt
+    stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_ITListenCplt) for I2C_ITListenCplt
+    stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_Flush_TXDR) for I2C_Flush_TXDR
+    stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_ITAddrCplt) for I2C_ITAddrCplt
+    stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_ITSlaveSequentialCplt) for I2C_ITSlaveSequentialCplt
+    stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT) refers to stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt) for I2C_ITSlaveCplt
+    stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.I2C_WaitOnRXNEFlagUntilTimeout) refers to stm32f0xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed) for I2C_IsAcknowledgeFailed
+    stm32f0xx_hal_i2c.o(i.I2C_WaitOnRXNEFlagUntilTimeout) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.I2C_WaitOnSTOPFlagUntilTimeout) refers to stm32f0xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed) for I2C_IsAcknowledgeFailed
+    stm32f0xx_hal_i2c.o(i.I2C_WaitOnSTOPFlagUntilTimeout) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_i2c.o(i.I2C_WaitOnTXISFlagUntilTimeout) refers to stm32f0xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed) for I2C_IsAcknowledgeFailed
+    stm32f0xx_hal_i2c.o(i.I2C_WaitOnTXISFlagUntilTimeout) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_cortex.o(i.HAL_NVIC_SetPriority) refers to stm32f0xx_hal_cortex.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_Config) refers to stm32f0xx_hal_cortex.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler) refers to stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_Callback) for HAL_SYSTICK_Callback
+    stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKFreq) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) for HAL_RCC_GetPCLK1Freq
+    stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKFreq) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq) for HAL_RCC_GetSysClockFreq
+    stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal.o(i.HAL_DeInit) refers to stm32f0xx_hal.o(i.HAL_MspDeInit) for HAL_MspDeInit
+    stm32f0xx_hal.o(i.HAL_Delay) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal.o(i.HAL_GetTick) refers to stm32f0xx_hal.o(.data) for .data
+    stm32f0xx_hal.o(i.HAL_IncTick) refers to stm32f0xx_hal.o(.data) for .data
+    stm32f0xx_hal.o(i.HAL_Init) refers to stm32f0xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f0xx_hal.o(i.HAL_Init) refers to stm32f0xx_hal_msp.o(i.HAL_MspInit) for HAL_MspInit
+    stm32f0xx_hal.o(i.HAL_InitTick) refers to stm32f0xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq) for HAL_RCC_GetHCLKFreq
+    stm32f0xx_hal.o(i.HAL_InitTick) refers to uidiv.o(.text) for __aeabi_uidivmod
+    stm32f0xx_hal.o(i.HAL_InitTick) refers to stm32f0xx_hal_cortex.o(i.HAL_SYSTICK_Config) for HAL_SYSTICK_Config
+    stm32f0xx_hal.o(i.HAL_InitTick) refers to stm32f0xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    stm32f0xx_hal_dma.o(i.DMA_CalcBaseAndBitshift) refers to uidiv.o(.text) for __aeabi_uidivmod
+    stm32f0xx_hal_dma.o(i.HAL_DMA_DeInit) refers to stm32f0xx_hal_dma.o(i.DMA_CalcBaseAndBitshift) for DMA_CalcBaseAndBitshift
+    stm32f0xx_hal_dma.o(i.HAL_DMA_Init) refers to stm32f0xx_hal_dma.o(i.DMA_CalcBaseAndBitshift) for DMA_CalcBaseAndBitshift
+    stm32f0xx_hal_dma.o(i.HAL_DMA_PollForTransfer) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_dma.o(i.HAL_DMA_Start) refers to stm32f0xx_hal_dma.o(i.DMA_SetConfig) for DMA_SetConfig
+    stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT) refers to stm32f0xx_hal_dma.o(i.DMA_SetConfig) for DMA_SetConfig
+    stm32f0xx_hal_dma.o(i.HAL_DMA_UnRegisterCallback) refers to stm32f0xx_hal_dma.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    stm32f0xx_hal_flash.o(i.FLASH_Program_HalfWord) refers to stm32f0xx_hal_flash.o(.bss) for .bss
+    stm32f0xx_hal_flash.o(i.FLASH_SetErrorCode) refers to stm32f0xx_hal_flash.o(.bss) for .bss
+    stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) refers to stm32f0xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) refers to stm32f0xx_hal_flash.o(i.FLASH_SetErrorCode) for FLASH_SetErrorCode
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_GetError) refers to stm32f0xx_hal_flash.o(.bss) for .bss
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f0xx_hal_flash.o(i.FLASH_SetErrorCode) for FLASH_SetErrorCode
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f0xx_hal_flash.o(i.HAL_FLASH_OperationErrorCallback) for HAL_FLASH_OperationErrorCallback
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f0xx_hal_flash.o(i.FLASH_Program_HalfWord) for FLASH_Program_HalfWord
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f0xx_hal_flash.o(i.HAL_FLASH_EndOfOperationCallback) for HAL_FLASH_EndOfOperationCallback
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f0xx_hal_flash_ex.o(i.FLASH_PageErase) for FLASH_PageErase
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f0xx_hal_flash.o(.bss) for .bss
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_OB_Launch) refers to stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_Program) refers to llushr.o(.text) for __aeabi_llsr
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f0xx_hal_flash.o(i.FLASH_Program_HalfWord) for FLASH_Program_HalfWord
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f0xx_hal_flash.o(.bss) for .bss
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_Program_IT) refers to stm32f0xx_hal_flash.o(i.FLASH_Program_HalfWord) for FLASH_Program_HalfWord
+    stm32f0xx_hal_flash.o(i.HAL_FLASH_Program_IT) refers to stm32f0xx_hal_flash.o(.bss) for .bss
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    malloc.o(i.free) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to startup_stm32f030x8.o(HEAP) for __heap_base
+    mallocr.o(i.__free$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.__malloc$realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocr.o(i.__malloc$realloc) refers to startup_stm32f030x8.o(HEAP) for __heap_base
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocr.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.realloc) refers to mallocr.o(i.__free$realloc) for free
+    mallocr.o(i.realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.__malloc$realloc) for malloc
+    mallocr.o(i.realloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloca.o(i.__aligned_malloc) refers to startup_stm32f030x8.o(HEAP) for __heap_base
+    malloca.o(i.__free$memalign) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__malloc$memalign) refers to malloca.o(i.__aligned_malloc) for __aligned_malloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to startup_stm32f030x8.o(HEAP) for __heap_base
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocra.o(i.__free$realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__malloc$realloc$memalign) refers to mallocra.o(i.__aligned_malloc$realloc) for __aligned_malloc$realloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__free$realloc$memalign) for __free$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__malloc$realloc$memalign) for __malloc$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocra.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f030x8.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f030x8.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_stm32f030x8.o(HEAP), (512 bytes).
+    Removing stm32f0xx_hal_msp.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_msp.o(.revsh_text), (4 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_it.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_it.o(.revsh_text), (4 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing i2c.o(.rev16_text), (4 bytes).
+    Removing i2c.o(.revsh_text), (4 bytes).
+    Removing i2c.o(i.HAL_I2C_MspDeInit), (44 bytes).
+    Removing mpu6050.o(i.getAccelFIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getAccelXSelfTest), (44 bytes).
+    Removing mpu6050.o(i.getAccelYSelfTest), (44 bytes).
+    Removing mpu6050.o(i.getAccelZSelfTest), (44 bytes).
+    Removing mpu6050.o(i.getAcceleration), (76 bytes).
+    Removing mpu6050.o(i.getAccelerationX), (48 bytes).
+    Removing mpu6050.o(i.getAccelerationY), (48 bytes).
+    Removing mpu6050.o(i.getAccelerationZ), (48 bytes).
+    Removing mpu6050.o(i.getAccelerometerPowerOnDelay), (40 bytes).
+    Removing mpu6050.o(i.getAuxVDDIOLevel), (36 bytes).
+    Removing mpu6050.o(i.getClockOutputEnabled), (44 bytes).
+    Removing mpu6050.o(i.getClockSource), (40 bytes).
+    Removing mpu6050.o(i.getDHPFMode), (40 bytes).
+    Removing mpu6050.o(i.getDLPFMode), (40 bytes).
+    Removing mpu6050.o(i.getDMPConfig1), (32 bytes).
+    Removing mpu6050.o(i.getDMPConfig2), (32 bytes).
+    Removing mpu6050.o(i.getDMPEnabled), (44 bytes).
+    Removing mpu6050.o(i.getDMPInt0Status), (44 bytes).
+    Removing mpu6050.o(i.getDMPInt1Status), (44 bytes).
+    Removing mpu6050.o(i.getDMPInt2Status), (44 bytes).
+    Removing mpu6050.o(i.getDMPInt3Status), (44 bytes).
+    Removing mpu6050.o(i.getDMPInt4Status), (44 bytes).
+    Removing mpu6050.o(i.getDMPInt5Status), (44 bytes).
+    Removing mpu6050.o(i.getDeviceID), (40 bytes).
+    Removing mpu6050.o(i.getExternalFrameSync), (40 bytes).
+    Removing mpu6050.o(i.getExternalSensorByte), (36 bytes).
+    Removing mpu6050.o(i.getExternalSensorDWord), (52 bytes).
+    Removing mpu6050.o(i.getExternalSensorWord), (48 bytes).
+    Removing mpu6050.o(i.getExternalShadowDelayEnabled), (44 bytes).
+    Removing mpu6050.o(i.getFIFOByte), (32 bytes).
+    Removing mpu6050.o(i.getFIFOBytes), (28 bytes).
+    Removing mpu6050.o(i.getFIFOCount), (44 bytes).
+    Removing mpu6050.o(i.getFIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getFSyncInterruptEnabled), (44 bytes).
+    Removing mpu6050.o(i.getFSyncInterruptLevel), (44 bytes).
+    Removing mpu6050.o(i.getFreefallDetectionCounterDecrement), (40 bytes).
+    Removing mpu6050.o(i.getFreefallDetectionDuration), (32 bytes).
+    Removing mpu6050.o(i.getFreefallDetectionThreshold), (32 bytes).
+    Removing mpu6050.o(i.getFullScaleAccelRange), (40 bytes).
+    Removing mpu6050.o(i.getFullScaleGyroRange), (40 bytes).
+    Removing mpu6050.o(i.getI2CBypassEnabled), (44 bytes).
+    Removing mpu6050.o(i.getI2CMasterModeEnabled), (44 bytes).
+    Removing mpu6050.o(i.getIntDMPEnabled), (44 bytes).
+    Removing mpu6050.o(i.getIntDMPStatus), (44 bytes).
+    Removing mpu6050.o(i.getIntDataReadyEnabled), (44 bytes).
+    Removing mpu6050.o(i.getIntDataReadyStatus), (44 bytes).
+    Removing mpu6050.o(i.getIntEnabled), (32 bytes).
+    Removing mpu6050.o(i.getIntFIFOBufferOverflowEnabled), (44 bytes).
+    Removing mpu6050.o(i.getIntFIFOBufferOverflowStatus), (44 bytes).
+    Removing mpu6050.o(i.getIntFreefallEnabled), (44 bytes).
+    Removing mpu6050.o(i.getIntFreefallStatus), (44 bytes).
+    Removing mpu6050.o(i.getIntI2CMasterEnabled), (44 bytes).
+    Removing mpu6050.o(i.getIntI2CMasterStatus), (44 bytes).
+    Removing mpu6050.o(i.getIntMotionEnabled), (44 bytes).
+    Removing mpu6050.o(i.getIntMotionStatus), (44 bytes).
+    Removing mpu6050.o(i.getIntPLLReadyEnabled), (44 bytes).
+    Removing mpu6050.o(i.getIntPLLReadyStatus), (44 bytes).
+    Removing mpu6050.o(i.getIntStatus), (32 bytes).
+    Removing mpu6050.o(i.getIntZeroMotionEnabled), (44 bytes).
+    Removing mpu6050.o(i.getIntZeroMotionStatus), (44 bytes).
+    Removing mpu6050.o(i.getInterruptDrive), (44 bytes).
+    Removing mpu6050.o(i.getInterruptLatch), (44 bytes).
+    Removing mpu6050.o(i.getInterruptLatchClear), (44 bytes).
+    Removing mpu6050.o(i.getInterruptMode), (44 bytes).
+    Removing mpu6050.o(i.getLostArbitration), (44 bytes).
+    Removing mpu6050.o(i.getMasterClockSpeed), (40 bytes).
+    Removing mpu6050.o(i.getMotion6), (120 bytes).
+    Removing mpu6050.o(i.getMotion9), (16 bytes).
+    Removing mpu6050.o(i.getMotionDetectionCounterDecrement), (40 bytes).
+    Removing mpu6050.o(i.getMotionDetectionDuration), (32 bytes).
+    Removing mpu6050.o(i.getMotionDetectionThreshold), (32 bytes).
+    Removing mpu6050.o(i.getMultiMasterEnabled), (44 bytes).
+    Removing mpu6050.o(i.getOTPBankValid), (36 bytes).
+    Removing mpu6050.o(i.getPassthroughStatus), (44 bytes).
+    Removing mpu6050.o(i.getRate), (32 bytes).
+    Removing mpu6050.o(i.getRotation), (76 bytes).
+    Removing mpu6050.o(i.getRotationX), (48 bytes).
+    Removing mpu6050.o(i.getRotationY), (48 bytes).
+    Removing mpu6050.o(i.getRotationZ), (48 bytes).
+    Removing mpu6050.o(i.getSlate4InputByte), (32 bytes).
+    Removing mpu6050.o(i.getSlave0FIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getSlave0Nack), (44 bytes).
+    Removing mpu6050.o(i.getSlave1FIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getSlave1Nack), (44 bytes).
+    Removing mpu6050.o(i.getSlave2FIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getSlave2Nack), (44 bytes).
+    Removing mpu6050.o(i.getSlave3FIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getSlave3Nack), (44 bytes).
+    Removing mpu6050.o(i.getSlave4Address), (32 bytes).
+    Removing mpu6050.o(i.getSlave4Enabled), (44 bytes).
+    Removing mpu6050.o(i.getSlave4InterruptEnabled), (44 bytes).
+    Removing mpu6050.o(i.getSlave4IsDone), (44 bytes).
+    Removing mpu6050.o(i.getSlave4MasterDelay), (40 bytes).
+    Removing mpu6050.o(i.getSlave4Nack), (44 bytes).
+    Removing mpu6050.o(i.getSlave4Register), (32 bytes).
+    Removing mpu6050.o(i.getSlave4WriteMode), (44 bytes).
+    Removing mpu6050.o(i.getSlaveAddress), (48 bytes).
+    Removing mpu6050.o(i.getSlaveDataLength), (52 bytes).
+    Removing mpu6050.o(i.getSlaveDelayEnabled), (52 bytes).
+    Removing mpu6050.o(i.getSlaveEnabled), (56 bytes).
+    Removing mpu6050.o(i.getSlaveReadWriteTransitionEnabled), (44 bytes).
+    Removing mpu6050.o(i.getSlaveRegister), (48 bytes).
+    Removing mpu6050.o(i.getSlaveWordByteSwap), (56 bytes).
+    Removing mpu6050.o(i.getSlaveWordGroupOffset), (56 bytes).
+    Removing mpu6050.o(i.getSlaveWriteMode), (56 bytes).
+    Removing mpu6050.o(i.getSleepEnabled), (44 bytes).
+    Removing mpu6050.o(i.getStandbyXAccelEnabled), (44 bytes).
+    Removing mpu6050.o(i.getStandbyXGyroEnabled), (44 bytes).
+    Removing mpu6050.o(i.getStandbyYAccelEnabled), (44 bytes).
+    Removing mpu6050.o(i.getStandbyYGyroEnabled), (44 bytes).
+    Removing mpu6050.o(i.getStandbyZAccelEnabled), (44 bytes).
+    Removing mpu6050.o(i.getStandbyZGyroEnabled), (44 bytes).
+    Removing mpu6050.o(i.getTempFIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getTempSensorEnabled), (48 bytes).
+    Removing mpu6050.o(i.getTemperature), (48 bytes).
+    Removing mpu6050.o(i.getWaitForExternalSensorEnabled), (44 bytes).
+    Removing mpu6050.o(i.getWakeCycleEnabled), (44 bytes).
+    Removing mpu6050.o(i.getWakeFrequency), (40 bytes).
+    Removing mpu6050.o(i.getXAccelOffset), (48 bytes).
+    Removing mpu6050.o(i.getXFineGain), (36 bytes).
+    Removing mpu6050.o(i.getXGyroFIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getXGyroOffset), (48 bytes).
+    Removing mpu6050.o(i.getXGyroOffsetTC), (40 bytes).
+    Removing mpu6050.o(i.getXNegMotionDetected), (44 bytes).
+    Removing mpu6050.o(i.getXPosMotionDetected), (44 bytes).
+    Removing mpu6050.o(i.getYAccelOffset), (48 bytes).
+    Removing mpu6050.o(i.getYFineGain), (36 bytes).
+    Removing mpu6050.o(i.getYGyroFIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getYGyroOffset), (48 bytes).
+    Removing mpu6050.o(i.getYGyroOffsetTC), (40 bytes).
+    Removing mpu6050.o(i.getYNegMotionDetected), (44 bytes).
+    Removing mpu6050.o(i.getYPosMotionDetected), (44 bytes).
+    Removing mpu6050.o(i.getZAccelOffset), (48 bytes).
+    Removing mpu6050.o(i.getZFineGain), (36 bytes).
+    Removing mpu6050.o(i.getZGyroFIFOEnabled), (44 bytes).
+    Removing mpu6050.o(i.getZGyroOffset), (48 bytes).
+    Removing mpu6050.o(i.getZGyroOffsetTC), (40 bytes).
+    Removing mpu6050.o(i.getZNegMotionDetected), (44 bytes).
+    Removing mpu6050.o(i.getZPosMotionDetected), (44 bytes).
+    Removing mpu6050.o(i.getZeroMotionDetected), (44 bytes).
+    Removing mpu6050.o(i.getZeroMotionDetectionDuration), (32 bytes).
+    Removing mpu6050.o(i.getZeroMotionDetectionThreshold), (32 bytes).
+    Removing mpu6050.o(i.initialize), (40 bytes).
+    Removing mpu6050.o(i.readMemoryBlock), (128 bytes).
+    Removing mpu6050.o(i.readMemoryByte), (32 bytes).
+    Removing mpu6050.o(i.reset), (24 bytes).
+    Removing mpu6050.o(i.resetAccelerometerPath), (24 bytes).
+    Removing mpu6050.o(i.resetDMP), (24 bytes).
+    Removing mpu6050.o(i.resetFIFO), (24 bytes).
+    Removing mpu6050.o(i.resetGyroscopePath), (24 bytes).
+    Removing mpu6050.o(i.resetI2CMaster), (24 bytes).
+    Removing mpu6050.o(i.resetSensors), (24 bytes).
+    Removing mpu6050.o(i.resetTemperaturePath), (24 bytes).
+    Removing mpu6050.o(i.setAccelFIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setAccelXSelfTest), (24 bytes).
+    Removing mpu6050.o(i.setAccelYSelfTest), (24 bytes).
+    Removing mpu6050.o(i.setAccelZSelfTest), (24 bytes).
+    Removing mpu6050.o(i.setAccelerometerPowerOnDelay), (24 bytes).
+    Removing mpu6050.o(i.setAuxVDDIOLevel), (24 bytes).
+    Removing mpu6050.o(i.setClockOutputEnabled), (24 bytes).
+    Removing mpu6050.o(i.setClockSource), (24 bytes).
+    Removing mpu6050.o(i.setDHPFMode), (24 bytes).
+    Removing mpu6050.o(i.setDLPFMode), (24 bytes).
+    Removing mpu6050.o(i.setDMPConfig1), (20 bytes).
+    Removing mpu6050.o(i.setDMPConfig2), (20 bytes).
+    Removing mpu6050.o(i.setDMPEnabled), (24 bytes).
+    Removing mpu6050.o(i.setDeviceID), (24 bytes).
+    Removing mpu6050.o(i.setExternalFrameSync), (24 bytes).
+    Removing mpu6050.o(i.setExternalShadowDelayEnabled), (24 bytes).
+    Removing mpu6050.o(i.setFIFOByte), (20 bytes).
+    Removing mpu6050.o(i.setFIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setFSyncInterruptEnabled), (24 bytes).
+    Removing mpu6050.o(i.setFSyncInterruptLevel), (24 bytes).
+    Removing mpu6050.o(i.setFreefallDetectionCounterDecrement), (24 bytes).
+    Removing mpu6050.o(i.setFreefallDetectionDuration), (20 bytes).
+    Removing mpu6050.o(i.setFreefallDetectionThreshold), (20 bytes).
+    Removing mpu6050.o(i.setFullScaleAccelRange), (24 bytes).
+    Removing mpu6050.o(i.setFullScaleGyroRange), (24 bytes).
+    Removing mpu6050.o(i.setI2CBypassEnabled), (24 bytes).
+    Removing mpu6050.o(i.setI2CMasterModeEnabled), (24 bytes).
+    Removing mpu6050.o(i.setIntDMPEnabled), (24 bytes).
+    Removing mpu6050.o(i.setIntDataReadyEnabled), (24 bytes).
+    Removing mpu6050.o(i.setIntEnabled), (20 bytes).
+    Removing mpu6050.o(i.setIntFIFOBufferOverflowEnabled), (24 bytes).
+    Removing mpu6050.o(i.setIntFreefallEnabled), (24 bytes).
+    Removing mpu6050.o(i.setIntI2CMasterEnabled), (24 bytes).
+    Removing mpu6050.o(i.setIntMotionEnabled), (24 bytes).
+    Removing mpu6050.o(i.setIntPLLReadyEnabled), (24 bytes).
+    Removing mpu6050.o(i.setIntZeroMotionEnabled), (24 bytes).
+    Removing mpu6050.o(i.setInterruptDrive), (24 bytes).
+    Removing mpu6050.o(i.setInterruptLatch), (24 bytes).
+    Removing mpu6050.o(i.setInterruptLatchClear), (24 bytes).
+    Removing mpu6050.o(i.setInterruptMode), (24 bytes).
+    Removing mpu6050.o(i.setMasterClockSpeed), (24 bytes).
+    Removing mpu6050.o(i.setMemoryBank), (40 bytes).
+    Removing mpu6050.o(i.setMemoryStartAddress), (20 bytes).
+    Removing mpu6050.o(i.setMotionDetectionCounterDecrement), (24 bytes).
+    Removing mpu6050.o(i.setMotionDetectionDuration), (20 bytes).
+    Removing mpu6050.o(i.setMotionDetectionThreshold), (20 bytes).
+    Removing mpu6050.o(i.setMultiMasterEnabled), (24 bytes).
+    Removing mpu6050.o(i.setOTPBankValid), (24 bytes).
+    Removing mpu6050.o(i.setRate), (20 bytes).
+    Removing mpu6050.o(i.setSlave0FIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setSlave1FIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setSlave2FIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setSlave3FIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setSlave4Address), (20 bytes).
+    Removing mpu6050.o(i.setSlave4Enabled), (24 bytes).
+    Removing mpu6050.o(i.setSlave4InterruptEnabled), (24 bytes).
+    Removing mpu6050.o(i.setSlave4MasterDelay), (24 bytes).
+    Removing mpu6050.o(i.setSlave4OutputByte), (20 bytes).
+    Removing mpu6050.o(i.setSlave4Register), (20 bytes).
+    Removing mpu6050.o(i.setSlave4WriteMode), (24 bytes).
+    Removing mpu6050.o(i.setSlaveAddress), (32 bytes).
+    Removing mpu6050.o(i.setSlaveDataLength), (36 bytes).
+    Removing mpu6050.o(i.setSlaveDelayEnabled), (24 bytes).
+    Removing mpu6050.o(i.setSlaveEnabled), (32 bytes).
+    Removing mpu6050.o(i.setSlaveOutputByte), (28 bytes).
+    Removing mpu6050.o(i.setSlaveReadWriteTransitionEnabled), (24 bytes).
+    Removing mpu6050.o(i.setSlaveRegister), (32 bytes).
+    Removing mpu6050.o(i.setSlaveWordByteSwap), (32 bytes).
+    Removing mpu6050.o(i.setSlaveWordGroupOffset), (32 bytes).
+    Removing mpu6050.o(i.setSlaveWriteMode), (32 bytes).
+    Removing mpu6050.o(i.setSleepEnabled), (24 bytes).
+    Removing mpu6050.o(i.setStandbyXAccelEnabled), (24 bytes).
+    Removing mpu6050.o(i.setStandbyXGyroEnabled), (24 bytes).
+    Removing mpu6050.o(i.setStandbyYAccelEnabled), (24 bytes).
+    Removing mpu6050.o(i.setStandbyYGyroEnabled), (24 bytes).
+    Removing mpu6050.o(i.setStandbyZAccelEnabled), (24 bytes).
+    Removing mpu6050.o(i.setStandbyZGyroEnabled), (24 bytes).
+    Removing mpu6050.o(i.setTempFIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setTempSensorEnabled), (28 bytes).
+    Removing mpu6050.o(i.setWaitForExternalSensorEnabled), (24 bytes).
+    Removing mpu6050.o(i.setWakeCycleEnabled), (24 bytes).
+    Removing mpu6050.o(i.setWakeFrequency), (24 bytes).
+    Removing mpu6050.o(i.setXAccelOffset), (20 bytes).
+    Removing mpu6050.o(i.setXFineGain), (20 bytes).
+    Removing mpu6050.o(i.setXGyroFIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setXGyroOffset), (20 bytes).
+    Removing mpu6050.o(i.setXGyroOffsetTC), (28 bytes).
+    Removing mpu6050.o(i.setYAccelOffset), (20 bytes).
+    Removing mpu6050.o(i.setYFineGain), (20 bytes).
+    Removing mpu6050.o(i.setYGyroFIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setYGyroOffset), (20 bytes).
+    Removing mpu6050.o(i.setYGyroOffsetTC), (28 bytes).
+    Removing mpu6050.o(i.setZAccelOffset), (20 bytes).
+    Removing mpu6050.o(i.setZFineGain), (20 bytes).
+    Removing mpu6050.o(i.setZGyroFIFOEnabled), (24 bytes).
+    Removing mpu6050.o(i.setZGyroOffset), (20 bytes).
+    Removing mpu6050.o(i.setZGyroOffsetTC), (28 bytes).
+    Removing mpu6050.o(i.setZeroMotionDetectionDuration), (20 bytes).
+    Removing mpu6050.o(i.setZeroMotionDetectionThreshold), (20 bytes).
+    Removing mpu6050.o(i.switchSPIEnabled), (24 bytes).
+    Removing mpu6050.o(i.testConnection), (18 bytes).
+    Removing mpu6050.o(i.writeDMPConfigurationSet), (272 bytes).
+    Removing mpu6050.o(i.writeMemoryBlock), (304 bytes).
+    Removing mpu6050.o(i.writeMemoryByte), (20 bytes).
+    Removing mpu6050.o(i.writeProgDMPConfigurationSet), (10 bytes).
+    Removing mpu6050.o(i.writeProgMemoryBlock), (16 bytes).
+    Removing mpu6050.o(.bss), (14 bytes).
+    Removing mpu6050.o(.data), (1 bytes).
+    Removing i2cdev.o(i.readBit), (18 bytes).
+    Removing i2cdev.o(i.readBitW), (18 bytes).
+    Removing i2cdev.o(i.readBits), (40 bytes).
+    Removing i2cdev.o(i.readBitsW), (4 bytes).
+    Removing i2cdev.o(i.readByte), (2 bytes).
+    Removing i2cdev.o(i.readBytes), (2 bytes).
+    Removing i2cdev.o(i.readWord), (4 bytes).
+    Removing i2cdev.o(i.readWords), (4 bytes).
+    Removing i2cdev.o(i.writeBit), (34 bytes).
+    Removing i2cdev.o(i.writeBitW), (4 bytes).
+    Removing i2cdev.o(i.writeBits), (46 bytes).
+    Removing i2cdev.o(i.writeBitsW), (4 bytes).
+    Removing i2cdev.o(i.writeByte), (4 bytes).
+    Removing i2cdev.o(i.writeBytes), (4 bytes).
+    Removing i2cdev.o(i.writeWord), (4 bytes).
+    Removing i2cdev.o(i.writeWords), (4 bytes).
+    Removing i2cdev.o(.data), (2 bytes).
+    Removing system_stm32f0xx.o(.rev16_text), (4 bytes).
+    Removing system_stm32f0xx.o(.revsh_text), (4 bytes).
+    Removing system_stm32f0xx.o(i.SystemCoreClockUpdate), (108 bytes).
+    Removing system_stm32f0xx.o(.constdata), (8 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.FLASH_MassErase), (36 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP), (108 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP), (108 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.FLASH_OB_GetRDP), (32 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig), (96 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.FLASH_PageErase), (36 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase), (160 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT), (88 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase), (80 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBGetConfig), (36 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBGetUserData), (28 bytes).
+    Removing stm32f0xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram), (204 bytes).
+    Removing stm32f0xx_hal_gpio.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_gpio.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_gpio.o(i.HAL_GPIO_DeInit), (212 bytes).
+    Removing stm32f0xx_hal_gpio.o(i.HAL_GPIO_EXTI_Callback), (2 bytes).
+    Removing stm32f0xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler), (24 bytes).
+    Removing stm32f0xx_hal_gpio.o(i.HAL_GPIO_LockPin), (36 bytes).
+    Removing stm32f0xx_hal_gpio.o(i.HAL_GPIO_ReadPin), (10 bytes).
+    Removing stm32f0xx_hal_gpio.o(i.HAL_GPIO_TogglePin), (8 bytes).
+    Removing stm32f0xx_hal_pwr.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_pwr.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_DeInit), (24 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_DisableBkUpAccess), (16 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_DisableSEVOnPend), (16 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_DisableSleepOnExit), (16 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_DisableWakeUpPin), (16 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_EnableBkUpAccess), (16 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_EnableSEVOnPend), (16 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_EnableSleepOnExit), (16 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_EnableWakeUpPin), (16 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_EnterSLEEPMode), (32 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_EnterSTANDBYMode), (32 bytes).
+    Removing stm32f0xx_hal_pwr.o(i.HAL_PWR_EnterSTOPMode), (52 bytes).
+    Removing stm32f0xx_hal_pwr_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_pwr_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_rcc.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_rcc.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_CSSCallback), (2 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_DeInit), (76 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_DisableCSS), (20 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_EnableCSS), (20 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_GetClockConfig), (56 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_GetOscConfig), (156 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq), (32 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_MCOConfig), (76 bytes).
+    Removing stm32f0xx_hal_rcc.o(i.HAL_RCC_NMI_IRQHandler), (24 bytes).
+    Removing stm32f0xx_hal_i2c.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_i2c.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_AbortCpltCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_AddrCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_DeInit), (52 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_DisableListen_IT), (48 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_ER_IRQHandler), (88 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_EV_IRQHandler), (16 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_EnableListen_IT), (40 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_ErrorCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_GetError), (4 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_GetMode), (6 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_GetState), (6 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_IsDeviceReady), (284 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_ListenCpltCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_MasterRxCpltCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_MasterTxCpltCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Abort_IT), (88 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive), (280 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_DMA), (236 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive_IT), (124 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Sequential_Receive_IT), (116 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Sequential_Transmit_IT), (116 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit), (280 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_DMA), (240 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit_IT), (124 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_MemRxCpltCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_MemTxCpltCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read), (344 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_DMA), (248 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Read_IT), (188 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write), (340 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_DMA), (244 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Mem_Write_IT), (184 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_MspDeInit), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_MspInit), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_SlaveRxCpltCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_SlaveTxCpltCallback), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive), (292 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive_DMA), (156 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Receive_IT), (88 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Sequential_Receive_IT), (144 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Sequential_Transmit_IT), (144 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit), (300 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit_DMA), (156 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.HAL_I2C_Slave_Transmit_IT), (88 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_DMAAbort), (52 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_DMAError), (24 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_DMAMasterReceiveCplt), (68 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_DMAMasterTransmitCplt), (68 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_DMASlaveReceiveCplt), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_DMASlaveTransmitCplt), (2 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_Disable_IRQ), (86 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_Enable_IRQ), (100 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_Flush_TXDR), (34 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_ITAddrCplt), (122 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_ITError), (204 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_ITListenCplt), (96 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_ITMasterCplt), (160 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_ITMasterSequentialCplt), (70 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_ITSlaveCplt), (232 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_ITSlaveSequentialCplt), (74 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed), (116 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_DMA), (194 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_Master_ISR_IT), (296 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryRead), (106 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_RequestMemoryWrite), (106 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_DMA), (104 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_Slave_ISR_IT), (280 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_TransferConfig), (36 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout), (72 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_WaitOnRXNEFlagUntilTimeout), (120 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_WaitOnSTOPFlagUntilTimeout), (78 bytes).
+    Removing stm32f0xx_hal_i2c.o(i.I2C_WaitOnTXISFlagUntilTimeout), (82 bytes).
+    Removing stm32f0xx_hal_tim_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_tim_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_cortex.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_cortex.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_cortex.o(i.HAL_NVIC_ClearPendingIRQ), (20 bytes).
+    Removing stm32f0xx_hal_cortex.o(i.HAL_NVIC_DisableIRQ), (20 bytes).
+    Removing stm32f0xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ), (20 bytes).
+    Removing stm32f0xx_hal_cortex.o(i.HAL_NVIC_GetPendingIRQ), (28 bytes).
+    Removing stm32f0xx_hal_cortex.o(i.HAL_NVIC_GetPriority), (52 bytes).
+    Removing stm32f0xx_hal_cortex.o(i.HAL_NVIC_SetPendingIRQ), (20 bytes).
+    Removing stm32f0xx_hal_cortex.o(i.HAL_NVIC_SystemReset), (28 bytes).
+    Removing stm32f0xx_hal_rcc_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_rcc_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKConfig), (44 bytes).
+    Removing stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKFreq), (156 bytes).
+    Removing stm32f0xx_hal.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_DBGMCU_DisableDBGStandbyMode), (16 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_DBGMCU_DisableDBGStopMode), (16 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_DBGMCU_EnableDBGStandbyMode), (16 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_DBGMCU_EnableDBGStopMode), (16 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_DeInit), (36 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_Delay), (28 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_GetDEVID), (16 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_GetHalVersion), (6 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_GetREVID), (12 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_GetUIDw0), (12 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_GetUIDw1), (12 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_GetUIDw2), (12 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_MspDeInit), (2 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_MspInit), (2 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_ResumeTick), (16 bytes).
+    Removing stm32f0xx_hal.o(i.HAL_SuspendTick), (16 bytes).
+    Removing stm32f0xx_hal_dma.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_dma.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_dma.o(i.DMA_CalcBaseAndBitshift), (36 bytes).
+    Removing stm32f0xx_hal_dma.o(i.DMA_SetConfig), (40 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_Abort), (44 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_Abort_IT), (72 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_DeInit), (66 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_GetError), (4 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_GetState), (6 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_IRQHandler), (156 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_Init), (88 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_PollForTransfer), (176 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_RegisterCallback), (72 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_Start), (74 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_Start_IT), (106 bytes).
+    Removing stm32f0xx_hal_dma.o(i.HAL_DMA_UnRegisterCallback), (78 bytes).
+    Removing stm32f0xx_hal_tim.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_tim.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_flash.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_flash.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_flash.o(i.FLASH_Program_HalfWord), (32 bytes).
+    Removing stm32f0xx_hal_flash.o(i.FLASH_SetErrorCode), (56 bytes).
+    Removing stm32f0xx_hal_flash.o(i.FLASH_WaitForLastOperation), (80 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_EndOfOperationCallback), (2 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_GetError), (12 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_IRQHandler), (268 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_Lock), (20 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_OB_Launch), (32 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_OB_Lock), (20 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_OB_Unlock), (36 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_OperationErrorCallback), (2 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_Program), (124 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_Program_IT), (100 bytes).
+    Removing stm32f0xx_hal_flash.o(i.HAL_FLASH_Unlock), (36 bytes).
+    Removing stm32f0xx_hal_flash.o(.bss), (32 bytes).
+    Removing stm32f0xx_hal_i2c_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f0xx_hal_i2c_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f0xx_hal_i2c_ex.o(i.HAL_I2CEx_DisableFastModePlus), (36 bytes).
+    Removing stm32f0xx_hal_i2c_ex.o(i.HAL_I2CEx_EnableFastModePlus), (36 bytes).
+    Removing stm32f0xx_hal_dma.o(i.__ARM_common_switch8), (26 bytes).
+
+490 unused section(s) (total 23365 bytes) removed from the image.
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000d38, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00000d30, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x000000b4   Data   RO            3    RESET               startup_stm32f030x8.o
+    0x080000b4   0x00000000   Code   RO         3214  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x080000b4   0x00000004   Code   RO         3253    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x080000b8   0x00000004   Code   RO         3256    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x080000bc   0x00000000   Code   RO         3258    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x080000bc   0x00000000   Code   RO         3260    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x080000bc   0x00000008   Code   RO         3261    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x080000c4   0x00000000   Code   RO         3263    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x080000c4   0x00000000   Code   RO         3265    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x080000c4   0x00000004   Code   RO         3254    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x080000c8   0x0000001c   Code   RO            4    .text               startup_stm32f030x8.o
+    0x080000e4   0x0000002c   Code   RO         3217    .text               mc_p.l(uidiv.o)
+    0x08000110   0x00000024   Code   RO         3273    .text               mc_p.l(init.o)
+    0x08000134   0x00000148   Code   RO         2015    i.HAL_GPIO_Init     stm32f0xx_hal_gpio.o
+    0x0800027c   0x0000000c   Code   RO         2019    i.HAL_GPIO_WritePin  stm32f0xx_hal_gpio.o
+    0x08000288   0x0000000c   Code   RO         2839    i.HAL_GetTick       stm32f0xx_hal.o
+    0x08000294   0x0000004a   Code   RO         3178    i.HAL_I2CEx_ConfigAnalogFilter  stm32f0xx_hal_i2c_ex.o
+    0x080002de   0x00000048   Code   RO         3179    i.HAL_I2CEx_ConfigDigitalFilter  stm32f0xx_hal_i2c_ex.o
+    0x08000326   0x00000002   PAD
+    0x08000328   0x000000b4   Code   RO         2277    i.HAL_I2C_Init      stm32f0xx_hal_i2c.o
+    0x080003dc   0x00000048   Code   RO          196    i.HAL_I2C_MspInit   i2c.o
+    0x08000424   0x00000010   Code   RO         2843    i.HAL_IncTick       stm32f0xx_hal.o
+    0x08000434   0x00000020   Code   RO         2844    i.HAL_Init          stm32f0xx_hal.o
+    0x08000454   0x00000022   Code   RO         2845    i.HAL_InitTick      stm32f0xx_hal.o
+    0x08000476   0x00000002   PAD
+    0x08000478   0x00000038   Code   RO           12    i.HAL_MspInit       stm32f0xx_hal_msp.o
+    0x080004b0   0x00000008   Code   RO         2710    i.HAL_NVIC_SetPriority  stm32f0xx_hal_cortex.o
+    0x080004b8   0x000000e8   Code   RO         2800    i.HAL_RCCEx_PeriphCLKConfig  stm32f0xx_hal_rcc_ex.o
+    0x080005a0   0x0000012c   Code   RO         2175    i.HAL_RCC_ClockConfig  stm32f0xx_hal_rcc.o
+    0x080006cc   0x0000000c   Code   RO         2180    i.HAL_RCC_GetHCLKFreq  stm32f0xx_hal_rcc.o
+    0x080006d8   0x00000078   Code   RO         2183    i.HAL_RCC_GetSysClockFreq  stm32f0xx_hal_rcc.o
+    0x08000750   0x00000354   Code   RO         2186    i.HAL_RCC_OscConfig  stm32f0xx_hal_rcc.o
+    0x08000aa4   0x00000018   Code   RO         2712    i.HAL_SYSTICK_CLKSourceConfig  stm32f0xx_hal_cortex.o
+    0x08000abc   0x00000002   Code   RO         2713    i.HAL_SYSTICK_Callback  stm32f0xx_hal_cortex.o
+    0x08000abe   0x00000002   PAD
+    0x08000ac0   0x00000030   Code   RO         2714    i.HAL_SYSTICK_Config  stm32f0xx_hal_cortex.o
+    0x08000af0   0x00000008   Code   RO         2715    i.HAL_SYSTICK_IRQHandler  stm32f0xx_hal_cortex.o
+    0x08000af8   0x00000078   Code   RO          175    i.MX_GPIO_Init      gpio.o
+    0x08000b70   0x00000078   Code   RO          197    i.MX_I2C1_Init      i2c.o
+    0x08000be8   0x00000044   Code   RO         2716    i.NVIC_SetPriority  stm32f0xx_hal_cortex.o
+    0x08000c2c   0x0000000c   Code   RO          152    i.SysTick_Handler   stm32f0xx_it.o
+    0x08000c38   0x00000078   Code   RO          113    i.SystemClock_Config  main.o
+    0x08000cb0   0x0000005c   Code   RO         1898    i.SystemInit        system_stm32f0xx.o
+    0x08000d0c   0x00000002   Code   RO          114    i._Error_Handler    main.o
+    0x08000d0e   0x00000012   Code   RO          115    i.main              main.o
+    0x08000d20   0x00000010   Data   RO         1899    .constdata          system_stm32f0xx.o
+    0x08000d30   0x00000000   Data   RO         3275    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000458, Max: 0x00002000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000004   Data   RW         1901    .data               system_stm32f0xx.o
+    0x20000004   0x00000004   Data   RW         2850    .data               stm32f0xx_hal.o
+    0x20000008   0x0000004c   Zero   RW          198    .bss                i2c.o
+    0x20000054   0x00000004   PAD
+    0x20000058   0x00000400   Zero   RW            1    STACK               startup_stm32f030x8.o
+

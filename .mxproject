@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=D:/Learn/mpu6050/Inc
+HeaderPath=C:/Learn/STM32/balance/MPU6050-and-STM32F030/Inc
 HeaderFiles=gpio.h;i2c.h;stm32f0xx_it.h;stm32f0xx_hal_conf.h;main.h;
-SourcePath=D:/Learn/mpu6050/Src
+SourcePath=C:/Learn/STM32/balance/MPU6050-and-STM32F030/Src
 SourceFiles=gpio.h;i2c.h;stm32f0xx_it.h;stm32f0xx_hal_conf.h;main.h;gpio.c;i2c.c;stm32f0xx_it.c;stm32f0xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

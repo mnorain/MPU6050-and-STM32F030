@@ -3,34 +3,37 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.24.2.0
-Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: norain Windows User, Schlumberger, LIC=----
+IDE-Version: µVision V5.20.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mo norain, mo, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-Lite  Version: 5.24.1
+Toolchain:       MDK-Lite  Version: 5.20
 Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 5 (build 528)
-Assembler:       Armasm.exe V5.06 update 5 (build 528)
-Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
-Library Manager: ArmAr.exe V5.06 update 5 (build 528)
-Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
-CPU DLL:         SARMCM3.DLL V5.24.1
-Dialog DLL:      DARMCM1.DLL V1.18.0.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
-Dialog DLL:      TARMCM1.DLL V1.13.0.0
+C Compiler:      Armcc.exe V5.06 update 2 (build 183)
+Assembler:       Armasm.exe V5.06 update 2 (build 183)
+Linker/Locator:  ArmLink.exe V5.06 update 2 (build 183)
+Library Manager: ArmAr.exe V5.06 update 2 (build 183)
+Hex Converter:   FromElf.exe V5.06 update 2 (build 183)
+CPU DLL:         SARMCM3.DLL V5.20
+Dialog DLL:      DARMCM1.DLL V1.14.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
+Dialog DLL:      TARMCM1.DLL V1.10.0.0
  
 <h2>Project:</h2>
-D:\Learn\mpu6050\MDK-ARM\mpu6050.uvprojx
-Project File Date:  08/19/2017
+C:\Learn\STM32\balance\MPU6050-and-STM32F030\MDK-ARM\mpu6050.uvprojx
+Project File Date:  08/20/2017
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'mpu6050'
 assembling startup_stm32f030x8.s...
-compiling stm32f0xx_it.c...
 compiling stm32f0xx_hal_msp.c...
 compiling main.c...
+compiling stm32f0xx_it.c...
+compiling gpio.c...
+compiling i2c.c...
+compiling I2Cdev.c...
 compiling mpu6050.c...
 mpu6050.h(406): warning:  #1295-D: Deprecated declaration initialize - give arg types
           void initialize();
@@ -377,204 +380,82 @@ mpu6050.h(751): warning:  #1295-D: Deprecated declaration getDMPEnabled - give a
 ool getDMPEnabled();
 mpu6050.h(753): warning:  #1295-D: Deprecated declaration resetDMP - give arg types
           void resetDMP();
-mpu6050.h(756): error:  #18: expected a ")"
-          void setMemoryBank(uint8_t bank, 
-ool prefetchEnabled=false, bool userBank=false);
 mpu6050.h(762): warning:  #1295-D: Deprecated declaration readMemoryByte - give arg types
           uint8_t readMemoryByte();
-mpu6050.h(764): error:  #18: expected a ")"
-          void readMemoryBlock(uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0);
-mpu6050.h(765): error:  #18: expected a ")"
-          
-ool writeMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0, bool verify=true, bool useProgMem=false);
-mpu6050.h(766): error:  #18: expected a ")"
-          
-ool writeProgMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank=0, uint8_t address=0, bool verify=true);
-mpu6050.h(768): error:  #18: expected a ")"
-          
-ool writeDMPConfigurationSet(const uint8_t *data, uint16_t dataSize, 
-ool useProgMem=false);
 mpu6050.h(772): warning:  #1295-D: Deprecated declaration getDMPConfig1 - give arg types
           uint8_t getDMPConfig1();
 mpu6050.h(776): warning:  #1295-D: Deprecated declaration getDMPConfig2 - give arg types
           uint8_t getDMPConfig2();
-mpu6050.c(772): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_CTRL, 
-PU6050_WAIT_FOR_ES_BIT, buffer);
-mpu6050.c(790): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_CTRL, 
-PU6050_SLV_3_FIFO_EN_BIT, buffer);
-mpu6050.c(812): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_CTRL, 
-PU6050_I2C_MST_P_NSR_BIT, buffer);
-mpu6050.c(853): error:  #165: too few arguments in function call
-       readBits(devAddr, 
-PU6050_RA_I2C_MST_CTRL, 
-PU6050_I2C_MST_CLK_BIT, 
-PU6050_I2C_MST_CLK_LENGTH, buffer);
-mpu6050.c(909): error:  #165: too few arguments in function call
-       readByte(devAddr, 
-PU6050_RA_I2C_SLV0_ADDR + num*3, buffer);
-mpu6050.c(935): error:  #165: too few arguments in function call
-       readByte(devAddr, 
-PU6050_RA_I2C_SLV0_REG + num*3, buffer);
-mpu6050.c(957): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_SLV0_CTRL + num*3, 
-PU6050_I2C_SLV_EN_BIT, buffer);
-mpu6050.c(983): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_SLV0_CTRL + num*3, 
-PU6050_I2C_SLV_BYTE_SW_BIT, buffer);
-mpu6050.c(1008): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_SLV0_CTRL + num*3, 
-PU6050_I2C_SLV_REG_DIS_BIT, buffer);
-mpu6050.c(1034): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_SLV0_CTRL + num*3, 
-PU6050_I2C_SLV_GRP_BIT, buffer);
-mpu6050.c(1056): error:  #165: too few arguments in function call
-       readBits(devAddr, 
-PU6050_RA_I2C_SLV0_CTRL + num*3, 
-PU6050_I2C_SLV_LEN_BIT, 
-PU6050_I2C_SLV_LEN_LENGTH, buffer);
-mpu6050.c(1082): error:  #165: too few arguments in function call
-       readByte(devAddr, 
-PU6050_RA_I2C_SLV4_ADDR, buffer);
-mpu6050.c(1101): error:  #165: too few arguments in function call
-       readByte(devAddr, 
-PU6050_RA_I2C_SLV4_REG, buffer);
-mpu6050.c(1128): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_SLV4_CTRL, 
-PU6050_I2C_SLV4_EN_BIT, buffer);
-mpu6050.c(1149): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_SLV4_CTRL, 
-PU6050_I2C_SLV4_INT_EN_BIT, buffer);
-mpu6050.c(1170): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_SLV4_CTRL, 
-PU6050_I2C_SLV4_REG_DIS_BIT, buffer);
-mpu6050.c(1197): error:  #165: too few arguments in function call
-       readBits(devAddr, 
-PU6050_RA_I2C_SLV4_CTRL, 
-PU6050_I2C_SLV4_MST_DLY_BIT, 
-PU6050_I2C_SLV4_MST_DLY_LENGTH, buffer);
-mpu6050.c(1215): error:  #165: too few arguments in function call
-       readByte(devAddr, 
-PU6050_RA_I2C_SLV4_DI, buffer);
-mpu6050.c(1231): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_STATUS, 
-PU6050_MST_PASS_THROUGH_BIT, buffer);
-mpu6050.c(1243): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_STATUS, 
-PU6050_MST_I2C_SLV4_DONE_BIT, buffer);
-mpu6050.c(1254): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_STATUS, 
-PU6050_MST_I2C_LOST_ARB_BIT, buffer);
-mpu6050.c(1265): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_STATUS, 
-PU6050_MST_I2C_SLV4_NACK_BIT, buffer);
-mpu6050.c(1276): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_STATUS, 
-PU6050_MST_I2C_SLV3_NACK_BIT, buffer);
-mpu6050.c(1287): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_STATUS, 
-PU6050_MST_I2C_SLV2_NACK_BIT, buffer);
-mpu6050.c(1298): error:  #165: too few arguments in function call
-       readBit(devAddr, 
-PU6050_RA_I2C_MST_STATUS, 
-PU6050_MST_I2C_SLV1_NACK_BIT, buffer);
-mpu6050.c: 137 warnings, 30 errors
-compiling gpio.c...
-compiling i2c.c...
-compiling I2Cdev.c...
-I2Cdev.c(217): warning:  #223-D: function "millis" declared implicitly
-      uint32_t t1 = millis();
-I2Cdev.c(337): warning:  #223-D: function "millis" declared implicitly
-      uint32_t t1 = millis();
-I2Cdev.c(478): error:  #165: too few arguments in function call
-      readByte(devAddr, regAddr, &b);
-I2Cdev.c(492): error:  #165: too few arguments in function call
-      readWord(devAddr, regAddr, &w);
-I2Cdev.c(514): error:  #165: too few arguments in function call
-      if (readByte(devAddr, regAddr, &b) != 0) {
-I2Cdev.c(543): error:  #165: too few arguments in function call
-      if (readWord(devAddr, regAddr, &w) != 0) {
-I2Cdev.c(585): error:  #20: identifier "status" is undefined
-      return status == 0;
-I2Cdev.c(597): error:  #20: identifier "status" is undefined
-      return status == 0;
-I2Cdev.c(605): error:  #36: the #if for this directive is missing
-  #endif
-I2Cdev.c(102): warning:  #177-D: function "readBit"  was declared but never referenced
-  int8_t  readBit(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint8_t *data, uint16_t timeout) {
-I2Cdev.c(117): warning:  #177-D: function "readBitW"  was declared but never referenced
-  int8_t  readBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t *data, uint16_t timeout) {
-I2Cdev.c(133): warning:  #177-D: function "readBits"  was declared but never referenced
-  int8_t  readBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t *data, uint16_t timeout) {
-I2Cdev.c(158): warning:  #177-D: function "readBitsW"  was declared but never referenced
-  int8_t  readBitsW(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint16_t *data, uint16_t timeout) {
-I2Cdev.c(476): warning:  #177-D: function "writeBit"  was declared but never referenced
-  bool  writeBit(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint8_t data) {
-I2Cdev.c(490): warning:  #177-D: function "writeBitW"  was declared but never referenced
-  bool  writeBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t data) {
-I2Cdev.c(505): warning:  #177-D: function "writeBits"  was declared but never referenced
-  bool  writeBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t data) {
-I2Cdev.c(534): warning:  #177-D: function "writeBitsW"  was declared but never referenced
-  bool  writeBitsW(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint16_t data) {
-I2Cdev.c: 10 warnings, 7 errors
+mpu6050.c(2981): warning:  #223-D: function "malloc" declared implicitly
+      if (verify) verifyBuffer = (uint8_t *)malloc(MPU6050_DMP_MEMORY_CHUNK_SIZE);
+mpu6050.c(2982): warning:  #223-D: function "malloc" declared implicitly
+      if (useProgMem) progBuffer = (uint8_t *)malloc(MPU6050_DMP_MEMORY_CHUNK_SIZE);
+mpu6050.c(2995): warning:  #223-D: function "pgm_read_byte" declared implicitly
+              for (j = 0; j < chunkSize; j++) progBuffer[j] = pgm_read_byte(data + i + j);
+mpu6050.c(3008): warning:  #223-D: function "memcmp" declared implicitly
+              if (memcmp(progBuffer, verifyBuffer, chunkSize) != 0) {
+mpu6050.c(3026): warning:  #223-D: function "free" declared implicitly
+                  free(verifyBuffer);
+mpu6050.c(3045): warning:  #223-D: function "free" declared implicitly
+      if (verify) free(verifyBuffer);
+mpu6050.c(3046): warning:  #223-D: function "free" declared implicitly
+      if (useProgMem) free(progBuffer);
+mpu6050.c(3056): warning:  #223-D: function "malloc" declared implicitly
+          progBuffer = (uint8_t *)malloc(8); // assume 8-byte blocks, realloc later if necessary
+mpu6050.c(3064): warning:  #223-D: function "pgm_read_byte" declared implicitly
+              bank = pgm_read_byte(data + i++);
+mpu6050.c(3083): warning:  #223-D: function "realloc" declared implicitly
+                  if (sizeof(progBuffer) < length) progBuffer = (uint8_t *)realloc(progBuffer, length);
+mpu6050.c(3084): warning:  #223-D: function "pgm_read_byte" declared implicitly
+                  for (j = 0; j < length; j++) progBuffer[j] = pgm_read_byte(data + i + j);
+mpu6050.c(3097): warning:  #223-D: function "pgm_read_byte" declared implicitly
+                  special = pgm_read_byte(data + i++);
+mpu6050.c(3120): warning:  #223-D: function "free" declared implicitly
+              if (useProgMem) free(progBuffer);
+mpu6050.c(3124): warning:  #223-D: function "free" declared implicitly
+      if (useProgMem) free(progBuffer);
+mpu6050.c(3149): warning:  #1-D: last line of file ends without a newline
+  }
+mpu6050.c: 152 warnings, 0 errors
 compiling system_stm32f0xx.c...
-compiling stm32f0xx_hal_gpio.c...
 compiling stm32f0xx_hal_flash_ex.c...
 compiling stm32f0xx_hal_pwr.c...
 compiling stm32f0xx_hal_pwr_ex.c...
-compiling stm32f0xx_hal_rcc.c...
+compiling stm32f0xx_hal_gpio.c...
 compiling stm32f0xx_hal_tim_ex.c...
+compiling stm32f0xx_hal_rcc.c...
+compiling stm32f0xx_hal_i2c.c...
 compiling stm32f0xx_hal_cortex.c...
 compiling stm32f0xx_hal_rcc_ex.c...
-compiling stm32f0xx_hal_i2c.c...
 compiling stm32f0xx_hal.c...
-compiling stm32f0xx_hal_tim.c...
 compiling stm32f0xx_hal_dma.c...
-compiling stm32f0xx_hal_flash.c...
+compiling stm32f0xx_hal_tim.c...
 compiling stm32f0xx_hal_i2c_ex.c...
-"mpu6050\mpu6050.axf" - 37 Error(s), 147 Warning(s).
+compiling stm32f0xx_hal_flash.c...
+linking...
+mpu6050\mpu6050.axf: Error: L6218E: Undefined symbol pgm_read_byte (referred from mpu6050.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+"mpu6050\mpu6050.axf" - 1 Error(s), 152 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
-                ARM.CMSIS.5.0.1
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM::CMSIS:CORE:4.3.0
                 CMSIS (Cortex Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.0.1
-
-Package Vendor: Keil
-                http://www.keil.com/pack/Keil.STM32F0xx_DFP.1.5.0.pack
-                Keil.STM32F0xx_DFP.1.5.0
-                STMicroelectronics STM32F0 Series Device Support and Examples
+   * Component: CORE Version: 4.3.0
 
 <h2>Collection of Component include folders:</h2>
-  .\RTE\_mpu6050
-  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+  C:\Learn\STM32\balance\MPU6050-and-STM32F030\MDK-ARM\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
   C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.0.1
+   * Component: ARM::CMSIS:CORE:4.3.0
 Target not created.
-Build Time Elapsed:  00:00:06
+Build Time Elapsed:  00:00:10
 </pre>
 </body>
 </html>

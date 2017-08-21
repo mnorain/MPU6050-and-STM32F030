@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.06 update 2 (build 183) Tool: armlink [4d35b7]
+Component: ARM Compiler 5.06 update 5 (build 528) Tool: armlink [4d35e2]
 
 ==============================================================================
 
@@ -1518,75 +1518,3 @@ Removing Unused input sections from the image.
     Removing stm32f0xx_hal_dma.o(i.__ARM_common_switch8), (26 bytes).
 
 490 unused section(s) (total 23365 bytes) removed from the image.
-
-==============================================================================
-
-Memory Map of the image
-
-  Image Entry point : 0x00000000
-
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000d38, Max: 0x00010000, ABSOLUTE)
-
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00000d30, Max: 0x00010000, ABSOLUTE)
-
-    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x08000000   0x000000b4   Data   RO            3    RESET               startup_stm32f030x8.o
-    0x080000b4   0x00000000   Code   RO         3214  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
-    0x080000b4   0x00000004   Code   RO         3253    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
-    0x080000b8   0x00000004   Code   RO         3256    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
-    0x080000bc   0x00000000   Code   RO         3258    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
-    0x080000bc   0x00000000   Code   RO         3260    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
-    0x080000bc   0x00000008   Code   RO         3261    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
-    0x080000c4   0x00000000   Code   RO         3263    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
-    0x080000c4   0x00000000   Code   RO         3265    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
-    0x080000c4   0x00000004   Code   RO         3254    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
-    0x080000c8   0x0000001c   Code   RO            4    .text               startup_stm32f030x8.o
-    0x080000e4   0x0000002c   Code   RO         3217    .text               mc_p.l(uidiv.o)
-    0x08000110   0x00000024   Code   RO         3273    .text               mc_p.l(init.o)
-    0x08000134   0x00000148   Code   RO         2015    i.HAL_GPIO_Init     stm32f0xx_hal_gpio.o
-    0x0800027c   0x0000000c   Code   RO         2019    i.HAL_GPIO_WritePin  stm32f0xx_hal_gpio.o
-    0x08000288   0x0000000c   Code   RO         2839    i.HAL_GetTick       stm32f0xx_hal.o
-    0x08000294   0x0000004a   Code   RO         3178    i.HAL_I2CEx_ConfigAnalogFilter  stm32f0xx_hal_i2c_ex.o
-    0x080002de   0x00000048   Code   RO         3179    i.HAL_I2CEx_ConfigDigitalFilter  stm32f0xx_hal_i2c_ex.o
-    0x08000326   0x00000002   PAD
-    0x08000328   0x000000b4   Code   RO         2277    i.HAL_I2C_Init      stm32f0xx_hal_i2c.o
-    0x080003dc   0x00000048   Code   RO          196    i.HAL_I2C_MspInit   i2c.o
-    0x08000424   0x00000010   Code   RO         2843    i.HAL_IncTick       stm32f0xx_hal.o
-    0x08000434   0x00000020   Code   RO         2844    i.HAL_Init          stm32f0xx_hal.o
-    0x08000454   0x00000022   Code   RO         2845    i.HAL_InitTick      stm32f0xx_hal.o
-    0x08000476   0x00000002   PAD
-    0x08000478   0x00000038   Code   RO           12    i.HAL_MspInit       stm32f0xx_hal_msp.o
-    0x080004b0   0x00000008   Code   RO         2710    i.HAL_NVIC_SetPriority  stm32f0xx_hal_cortex.o
-    0x080004b8   0x000000e8   Code   RO         2800    i.HAL_RCCEx_PeriphCLKConfig  stm32f0xx_hal_rcc_ex.o
-    0x080005a0   0x0000012c   Code   RO         2175    i.HAL_RCC_ClockConfig  stm32f0xx_hal_rcc.o
-    0x080006cc   0x0000000c   Code   RO         2180    i.HAL_RCC_GetHCLKFreq  stm32f0xx_hal_rcc.o
-    0x080006d8   0x00000078   Code   RO         2183    i.HAL_RCC_GetSysClockFreq  stm32f0xx_hal_rcc.o
-    0x08000750   0x00000354   Code   RO         2186    i.HAL_RCC_OscConfig  stm32f0xx_hal_rcc.o
-    0x08000aa4   0x00000018   Code   RO         2712    i.HAL_SYSTICK_CLKSourceConfig  stm32f0xx_hal_cortex.o
-    0x08000abc   0x00000002   Code   RO         2713    i.HAL_SYSTICK_Callback  stm32f0xx_hal_cortex.o
-    0x08000abe   0x00000002   PAD
-    0x08000ac0   0x00000030   Code   RO         2714    i.HAL_SYSTICK_Config  stm32f0xx_hal_cortex.o
-    0x08000af0   0x00000008   Code   RO         2715    i.HAL_SYSTICK_IRQHandler  stm32f0xx_hal_cortex.o
-    0x08000af8   0x00000078   Code   RO          175    i.MX_GPIO_Init      gpio.o
-    0x08000b70   0x00000078   Code   RO          197    i.MX_I2C1_Init      i2c.o
-    0x08000be8   0x00000044   Code   RO         2716    i.NVIC_SetPriority  stm32f0xx_hal_cortex.o
-    0x08000c2c   0x0000000c   Code   RO          152    i.SysTick_Handler   stm32f0xx_it.o
-    0x08000c38   0x00000078   Code   RO          113    i.SystemClock_Config  main.o
-    0x08000cb0   0x0000005c   Code   RO         1898    i.SystemInit        system_stm32f0xx.o
-    0x08000d0c   0x00000002   Code   RO          114    i._Error_Handler    main.o
-    0x08000d0e   0x00000012   Code   RO          115    i.main              main.o
-    0x08000d20   0x00000010   Data   RO         1899    .constdata          system_stm32f0xx.o
-    0x08000d30   0x00000000   Data   RO         3275    Region$$Table       anon$$obj.o
-
-
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000458, Max: 0x00002000, ABSOLUTE)
-
-    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x20000000   0x00000004   Data   RW         1901    .data               system_stm32f0xx.o
-    0x20000004   0x00000004   Data   RW         2850    .data               stm32f0xx_hal.o
-    0x20000008   0x0000004c   Zero   RW          198    .bss                i2c.o
-    0x20000054   0x00000004   PAD
-    0x20000058   0x00000400   Zero   RW            1    STACK               startup_stm32f030x8.o
-
